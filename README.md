@@ -3,6 +3,17 @@ It is an way to store and organize data efficiently.
 <br>
 Here efficiently means (minimum time and space)
 
+
+
+# Array:
+1. array objects are stored in heap.
+2. As heap objects are not continuous so array may not be continuous .It depends on the JVM.
+
+
+<br>
+<br>
+3. In array of objects like array containing String value , each the elements in the array is itself a object and it is saved in different locations in heap memory and these elements providing the reference to the array.
+
 # Algorithm :
 It is the steps to solve a particular problem.
 
