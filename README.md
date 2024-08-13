@@ -79,15 +79,46 @@ for example : ArrayList .
 An ArrayList in Java is a class of the java.util package and is a part of  Java Collections Framework. It provides a resizable array, which can grow and shrink in size dynamically as elements are added or removed.It stores only non primitive data type(or we can say it stores objects).
 
 <br><br>
-Properties:
+Internal Working :
 <br>
-1.
+Actually Its size is fixed internally.But when we add about 50% of data then a new arraylist will be created of length of approx. double the length of the previous array and copy the element of old one into new one.
+and the previous array will be deleted.
 
+<br><br>
 
+Properties: 
+<br>
+1.ArrayList is not thread-safe.
+<br>
+2.Indexing order is preserved like array.
+<br>
+3.Duplicates are allowed like array.
+<br>
+4.Its elements can be accessed by index value using method.
+<br>
+5.The default capacity of an ArrayList is 10, but it automatically increases as more elements are added.
 
+# Some Common methods in ArrayList :
 
+1. add(element) : It adds a new element at the end.
+<br>
+2. add(index,element): It adds the element at the specified position.
+<br>
+3. get(int index): Returns the element at the specified position in the list.
+<br>
+4.set(int index, E element): Replaces the element at the specified position in the list with the specified element.
+<br>
+5.remove(int index): Removes the element at the specified position in the list.
 
-
+6.remove(Object o): Removes the first occurrence of the specified element from the list, if it is present.
+<br>
+7.size(): Returns the number of elements in the list.
+<br>
+8.clear(): Removes all elements from the list.
+<br>
+9.isEmpty(): Returns true if the list contains no elements.
+<br>
+10.contains(Object o): Returns true if the list contains the specified element.
 
 
 
