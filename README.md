@@ -28,7 +28,9 @@ It is measures of how running time of an algorithm increases with the size of in
 <br>
 
 Important Point :
-Time Complexity of a good Algorithm should be in O(log n) to O(1) where O is Big O notation.
+Time Complexity of a good/best Algorithm should be in O(log n) to O(1) where O is Big O notation.
+Here O(1) is a constant time complexity and its example is like  element found at 0 index .
+<br>
 Time Complexity always depends on the no of steps in an algorithm.
 
 # Array:
@@ -130,3 +132,105 @@ Properties:
 <br>
 3. Generalise the relation.
 
+
+
+# Linked List :
+Linked list is  a linear collection of data elements called node where each node contains data and pointer and the linear order is given by pointer.
+<br>
+Note : Pointer always points to the first node of Linked List.
+
+<br>
+It is of different types :
+<br>
+1. Singly Linked List 
+<br>
+2. Doubly Linked List 
+<br>
+3. Circular Linked List : we can implements using Singly Linked List and doubly Linked List.
+<br>
+
+# Why Use a Linked List?
+Dynamic Size: Unlike arrays, which have a fixed size, linked lists can grow or shrink dynamically as needed.
+Efficient Insertions/Deletions: Inserting or deleting nodes (especially at the beginning or middle) is faster because it involves changing references rather than shifting elements like in arrays.
+<br>
+Non-Contiguous Memory: Linked lists do not require contiguous memory like arrays, which can be an advantage in memory management.
+
+
+# When to Use a Linked List
+When you need efficient insertion or deletion operations (especially at the start or middle).
+<br>
+When memory allocation is an issue and contiguous memory for an array is hard to allocate.
+<br>
+When frequent resizing is required.
+
+<br>
+However, linked lists have some downsides:
+<br>
+They require more memory per node because of the extra reference pointer.
+<br>
+They have slower access times compared to arrays because elements are not stored in contiguous memory, so you must traverse the list to find an element.
+
+# Stack 
+A Stack is a linear data structure that follows the LIFO (Last In, First Out) principle. This means that the last element added to the stack is the first one to be removed. It can be visualized as a stack of plates where the plate placed last is the first one you take out.
+<br>
+
+# Key Operations in Stack:
+<br>
+push(item): Adds an item to the top of the stack.
+<br>
+pop(): Removes and returns the item from the top of the stack.
+<br>
+peek(): Returns the item at the top of the stack without removing it.
+<br>
+isEmpty(): Checks if the stack is empty.
+<br>
+size(): Returns the number of elements in the stack.
+<br>
+
+# Why Use a Stack?
+Reversing Data: Stacks are useful for reversing items due to their LIFO nature.
+<br>
+Function Call Management: The call stack in a program keeps track of function calls, pushing and popping functions as they are called and completed.
+<br>
+Backtracking Algorithms: Stacks are used in algorithms like Depth-First Search (DFS) for graph traversal or maze solving, as they help in backtracking.
+<br>
+Expression Evaluation: In compilers and interpreters, stacks are used to evaluate expressions and parse syntax.
+Undo Mechanism: Many applications, such as text editors, use stacks to implement undo/redo functionality.
+<br>
+Undo Mechanism: Many applications, such as text editors, use stacks to implement undo/redo functionality.
+
+# Queues :
+A Queue is a linear data structure that follows the FIFO (First In, First Out) principle. This means that the first element added to the queue will be the first one to be removed, similar to a real-world queue (like waiting in line for a movie ticket).
+
+# Key Operations in Queue:
+enqueue(item): or add() : Adds an item to the rear (end) of the queue.
+<br>
+dequeue(): or  remove() :  Removes and returns the item from the front of the queue.
+<br>
+peek(): Returns the front item without removing it.
+<br>
+isEmpty(): Checks if the queue is empty.
+<br>
+size(): Returns the number of elements in the queue.
+
+# Types of Queues:
+Simple Queue: Basic FIFO structure.
+<br>
+Circular Queue: The last position connects back to the first position, forming a circle.
+<br>
+Priority Queue: Elements are dequeued based on priority, not order of arrival.
+<br>
+Deque (Double-ended Queue): Insertion and deletion are allowed at both ends.
+<br>
+
+# Why Use a Queue?
+Task Scheduling: Queues are used in scheduling tasks or jobs where the first task must be completed before the next one (e.g., in a printer queue).
+<br>
+Breadth-First Search (BFS): In graph and tree traversal algorithms like BFS, queues are used to explore nodes level by level.
+<br>
+Buffer Management: Queues are used in buffering applications like handling requests in web servers.
+<br>
+Real-Time Systems: Queues help in managing tasks that must be processed in the order they arrive, such as in CPU task scheduling or network packet management.
+
+
+# when we use Dequeue ?

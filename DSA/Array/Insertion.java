@@ -22,13 +22,15 @@ public class Insertion {
 
     public static void insert(int[] numbers, int element, int indexToInsert) {
         int[] newArr = new int[numbers.length + 1];
+        if (indexToInsert >= numbers.length)   // points to be remember 
+        {
+            newArr[newArr.length - 1] = element;
+        }
         for (int i = 0, j = 0; i < numbers.length; i++, j++) {
             if (i == indexToInsert) {
                 newArr[j] = element;
                 j++;
-            } else if (indexToInsert >= numbers.length - 1) {
-                newArr[newArr.length - 1] = element;
-            }
+            } 
             newArr[j] = numbers[i];
 
         }

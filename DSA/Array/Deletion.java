@@ -26,7 +26,8 @@ public class Deletion{
             if (numbers[i] == elementToDelete) {
                 j++;
             } 
-            else if (numbers[numbers.length - 1] == elementToDelete) {
+            else if (numbers[numbers.length - 1] == elementToDelete) // point to be remember
+            {
               numbers[numbers.length-1]= 0;
             }
             numbers[i] = numbers[j];
