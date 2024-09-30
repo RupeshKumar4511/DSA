@@ -56,6 +56,8 @@ ex: int[][] arr = new int[2][];
 10. We can traversing an array using for loop or while loop.
 <br>
 11.Insertion,deletion and search an element (if index is not known) in an array is very costly(in term of time).
+<br>
+12. Array is not thread safe.(A thread is a lightweight process that allows for concurrent execution of code.In java Threads operates asynchronously.)
 
 # When to use Array:
 1.When we need fast access to elements using an index.
@@ -67,10 +69,10 @@ ex: int[][] arr = new int[2][];
 
 
 # Types of array on the basis of memory allocation:
-1.Static array :These are such arrays whose size is fixed but  they allocates memory at run time.
+1.Static array :These are such arrays whose size is fixed but they allocates memory at run time.
 for example : array.
 <br>
-2.Dynamic array : These are such array which allocates memory at runtime . It automatically grows up when we try to make insertion .
+2.Dynamic array : These are such array which allocates memory at runtime  but it automatically grows up when we try to make insertion .
 for example : ArrayList .
 
 

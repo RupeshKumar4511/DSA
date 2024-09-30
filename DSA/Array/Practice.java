@@ -6,7 +6,7 @@
 // public class  Practice{
 
 //     public static  HashSet<Integer> findLeaders(int[] arr) {
-        
+
 //         HashSet<Integer> leaders = new HashSet<>();
 //         leaders.add(arr[arr.length-1]);
 //         int max = arr[arr.length-1];
@@ -14,26 +14,23 @@
 //             if(arr[i] >= max){
 //               leaders.add(arr[i]);
 //               max = arr[i];
-              
+
 //             }
 //         }
-        
+
 //         return leaders;
 
 //     }
-        
-    
 
 //     public static void main(String[] args) {
 //         int[] A = {16, 17,5,1,3, 4, 3, 5, 2};
-        
+
 //         HashSet<Integer> leaders = findLeaders(A);
-        
+
 //         // Print the leaders
 //         System.out.println("Leaders in the array: " + leaders);
 //     }
 // }
-
 
 // Que 2. maximum b/w two points in array:
 
@@ -59,9 +56,6 @@
 //       return max;
 //     }
 //   }
-
-
-
 
 // Que 3.Insertion and deletion in array.
 
@@ -106,7 +100,6 @@
 
 // }
 
-
 // other way
 // int[] arr = { 2, 6, 3, 1, 7, 8 };
 // int[] newArr = new int[arr.length + 1];
@@ -128,8 +121,6 @@
 
 // System.out.println(Arrays.toString(newArr));
 
-
-
 // Delete an element at a specific position (requires shifting)
 // public static void delete(int[] numbers, int elementToDelete) {
 
@@ -147,12 +138,6 @@
 
 // }
 // }
-
-
-
-
-
-
 
 // Bubble sort
 // public class Practice {
@@ -202,7 +187,6 @@
 // }
 // }
 
-
 // Linear Search in 2d array
 // import java.util.Arrays;
 
@@ -228,7 +212,6 @@
 // return new int[]{-1,-1};
 // }
 // }
-
 
 // Q: Given an array containing some integer value . find the no of elements
 // which contains even no of digits.
@@ -489,7 +472,6 @@
 // int left = 0 ;
 // int right = 1;
 
-
 // //point to be remember 
 
 // while(target>arr[right]){
@@ -530,7 +512,7 @@
  * array if numbers increase up till one point, then decreases till the end.
  */
 
-// Q . find the peak of the mountain array.
+//Q . find the peak of the mountain array.
 
 // public class Practice{
 // public static void main(String[] args){
@@ -542,7 +524,7 @@
 // int start = 0;
 // int end = arr.length -1 ;
 // while(start < end)    // points to be remember 
-//{
+// {
 // int mid = start + (end - start)/2;
 
 // if(arr[mid] > arr[mid +1]){
@@ -602,3 +584,184 @@
 // return -1;
 // }
 // }
+
+
+
+// full logical question...
+// Rotated array : A rotated array is a sorted array that has been shifted or rotated by a certain number of positions to the right. In other words, the elements of the original sorted array have been rearranged by moving the last few elements to the beginning of the array.
+
+// For example, consider the sorted array [1, 2, 3, 4, 5]. If we rotate it by 2 positions to the right, the resulting array becomes [4, 5, 1, 2, 3]. The original sorted order is preserved, but the elements have been shifted to create a new sequence.
+
+// Q. search in an sorted rotated array :
+
+// Steps for the First way when there is no duplicate elements in the array :
+// step 1 :  find the pivot(It is element of the array from where next elements are ascending or we can say it is the largest element of the array.)
+// ex : arr = [4, 5, 1, 2, 3] in this example 5 is the pivot. 
+
+// There are three cases to find the pivot.
+// case 1 : If the mid element is greater than (mid + 1) element then mid element is the pivot.
+//  [3,4,5,6,7,0,1,2,3] in this example if mid is 7. 
+
+// case 2 :  in the prev example, if mid is 0 or we can say if mid element is less than (mid -1) then (mid - 1) is the pivot .
+
+// case 3 : in the prev example , if the start element is greater or equal to the mid element we can say all the elements after the mid element will be smaller than start element so we don't need to check it hence end = mid.
+
+// case 4 : if the start element is less than mid element then pivot will lie after the mid element so start = mid +1 .
+
+// step 2 : Apply the binary search in the first half and then in the second half .
+
+// public class Practice {
+//   public static void main(String[] args) {
+//     int[] arr = { 1, 2, 3, 3, 5, 0, 1, 2 };
+//     int target = 5;
+//     System.out.println(Search(arr, target));
+//     System.out.println("Rotation count will be "+(findPivotwithduplicates(arr)+1));
+
+//   }
+
+  // This will not work for the rotated sorted array containing no duplicate
+  // values.
+  // public static int findPivot(int[] arr) {
+  // int left = 0;
+  // int right = arr.length - 1;
+  // while (left <= right) {
+  // int mid = left + (right - left) / 2;
+  // if (mid < right && arr[mid] > arr[mid + 1]) {
+  // return mid;
+  // } else if (mid > left && arr[mid] < arr[mid - 1]) {
+  // return mid - 1;
+  // } else if (arr[left] >= arr[mid]) {
+  // right = mid - 1;
+  // }
+
+  // else if (arr[left] < arr[mid]) {
+  // left = mid + 1;
+  // }
+  // }
+  // return -1;
+  // }
+
+  // this works for the duplicates value in the rotated array..
+//   public static int findPivotwithduplicates(int[] arr) {
+//     int left = 0;
+//     int right = arr.length - 1;
+
+//     while (left <= right) {
+
+//       int mid = left + (right - left) / 2;
+//       if (mid < right && arr[mid] > arr[mid + 1]) {
+//         return mid;
+//       } else if (mid > left && arr[mid] < arr[mid - 1]) {
+//         return mid - 1;
+//       } else if (arr[left] == arr[mid] && arr[right] == arr[mid]) {
+
+//         // check if first or last is pivot or not
+//         if (arr[left] > arr[left + 1]) {
+//           return left;
+//         }
+//         left--;
+//         if (arr[right] < arr[right - 1]) {
+//           return right;
+//         }
+//         right--;
+
+//       } else if (arr[left] < arr[mid] || (arr[left] == arr[mid] && arr[mid] > arr[right])) {
+//         left = mid + 1;
+//       } else {
+//         right = mid - 1;
+//       }
+
+//     }
+//     return -1;
+//   }
+
+//   public static int Search(int[] arr, int target) {
+//     int left = 0;
+
+//     int pivot = findPivotwithduplicates(arr);
+//     int result = -1;
+//     if (pivot == -1) {
+//       result = findValue(arr, 0, arr.length - 1, target);
+//     } else if (arr[pivot] == target) {
+//       return pivot;
+//     } else if (target > arr[left]) {
+//       result = findValue(arr, left, pivot, target);
+//     } else if (target < arr[left]) {
+
+//       result = findValue(arr, pivot + 1, arr.length - 1, target);
+//     }
+//     return result;
+
+//   }
+
+//   public static int findValue(int[] arr, int start, int end, int target) {
+
+//     while (start <= end) {
+//       int mid = start + (end - start) / 2;
+
+//       if (arr[mid] == target) {
+//         return mid;
+//       } else if (arr[mid] < target) {
+//         start = mid + 1;
+//       } else {
+//         end = mid - 1;
+
+//       }
+
+//     }
+//     return -1;
+
+//   }
+
+// }
+
+
+// Q. Given an array arr which consists of non-negative integers and an integers m, you can split the array into m non -empty continuous subarrays.
+// hint : we need to find the largest sum having smallest no of elemets in the subarray.  
+
+public class Practice{
+    public static void main(String[] args){
+    int[] arr = {7,2,5,10,8};
+    int m = 2;
+    System.out.println(splitLargestSum(arr,m));
+    }
+  
+  
+    public static int splitLargestSum(int[] arr,int m){
+      int left = 0 ;
+      int right = 0;
+      for(int i =0;i<arr.length;i++){
+        left = Math.max(left,arr[i]);  // MIN sum of subarray  
+        right += arr[i];  // MAX sum of subarray
+      }
+     
+  
+  
+      while(left < right){
+          int mid = left + (right-left)/2;
+  
+          // calculate how many pieces we can divide the array..
+          int sum = 0 ;
+          int pieces = 1 ;
+          for(int num : arr){
+              if(sum + num > mid){ 
+                // if this is the condition, we cannot add this to subarray. 
+                // then we need to add this in another subarray.
+                 sum = num;
+                 pieces++;
+              }
+              else{
+                sum += num;
+              }
+          }
+  
+          if(pieces > m ){
+            left = mid +1 ;
+          }else{
+            right = mid;
+          }
+      }
+      return right;
+    }
+  }
+  
