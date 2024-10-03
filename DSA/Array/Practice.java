@@ -41,13 +41,11 @@
 //     }
 //     public static int maxRange(int[] arr, int start, int end){
 //       int max = arr[start];
-//       if(start>end) // point to be noted
+//       if((start>end ) || arr.length == 0) // point to be noted
 //       {
 //         return -1;
 //       }
-//       else if (arr.length == 0){
-//         return -1;
-//       }
+//     
 //       for(int i =start ;i<=end ; i++){
 //          if(arr[i]>arr[start]){
 //           max = arr[i];
@@ -90,7 +88,8 @@
 // if (i == indexToInsert) {
 // newArr[j] = element;
 // j++;
-// } else if (indexToInsert >= numbers.length - 1) {
+// } else if (indexToInsert >= numbers.length - 1)  // point to be noted
+// {
 // newArr[newArr.length - 1] = element;
 // }
 // newArr[j] = numbers[i];
@@ -128,7 +127,8 @@
 // if (numbers[i] == elementToDelete) {
 // j++;
 // }
-// else if (numbers[numbers.length - 1] == elementToDelete) {
+// else if (numbers[numbers.length - 1] == elementToDelete)  // point to be noted 
+//{
 // numbers[numbers.length-1]= 0;
 // }
 // numbers[i] = numbers[j];
@@ -396,6 +396,7 @@
 // }
 
 // }
+// here we use remainder because after this operations index value of resultant element remains preserved in every case.
 // return arr[start%arr.length];   //point to be remember
 // }
 
@@ -473,7 +474,7 @@
 // int right = 1;
 
 // //point to be remember 
-
+// This method does not work when the element is greater than last element.In case we need to throw an indexoutofBound Exception .
 // while(target>arr[right]){
 // int temp = right + 1;
 // right = right + (right -left + 1)*2;
@@ -585,8 +586,6 @@
 // }
 // }
 
-
-
 // full logical question...
 // Rotated array : A rotated array is a sorted array that has been shifted or rotated by a certain number of positions to the right. In other words, the elements of the original sorted array have been rearranged by moving the last few elements to the beginning of the array.
 
@@ -619,29 +618,29 @@
 
 //   }
 
-  // This will not work for the rotated sorted array containing no duplicate
-  // values.
-  // public static int findPivot(int[] arr) {
-  // int left = 0;
-  // int right = arr.length - 1;
-  // while (left <= right) {
-  // int mid = left + (right - left) / 2;
-  // if (mid < right && arr[mid] > arr[mid + 1]) {
-  // return mid;
-  // } else if (mid > left && arr[mid] < arr[mid - 1]) {
-  // return mid - 1;
-  // } else if (arr[left] >= arr[mid]) {
-  // right = mid - 1;
-  // }
+// This will not work for the rotated sorted array containing no duplicate
+// values.
+// public static int findPivot(int[] arr) {
+// int left = 0;
+// int right = arr.length - 1;
+// while (left <= right) {
+// int mid = left + (right - left) / 2;
+// if (mid < right && arr[mid] > arr[mid + 1]) {
+// return mid;
+// } else if (mid > left && arr[mid] < arr[mid - 1]) {
+// return mid - 1;
+// } else if (arr[left] >= arr[mid]) {
+// right = mid - 1;
+// }
 
-  // else if (arr[left] < arr[mid]) {
-  // left = mid + 1;
-  // }
-  // }
-  // return -1;
-  // }
+// else if (arr[left] < arr[mid]) {
+// left = mid + 1;
+// }
+// }
+// return -1;
+// }
 
-  // this works for the duplicates value in the rotated array..
+// this works for the duplicates value in the rotated array..
 //   public static int findPivotwithduplicates(int[] arr) {
 //     int left = 0;
 //     int right = arr.length - 1;
@@ -715,53 +714,47 @@
 
 // }
 
-
 // Q. Given an array arr which consists of non-negative integers and an integers m, you can split the array into m non -empty continuous subarrays.
-// hint : we need to find the largest sum having smallest no of elemets in the subarray.  
+// hint : we need to find the smallest of largest sum in the subarray.  
 
-public class Practice{
-    public static void main(String[] args){
-    int[] arr = {7,2,5,10,8};
+public class Practice {
+  public static void main(String[] args) {
+    int[] arr = { 7, 2, 5, 10, 8 };
     int m = 2;
-    System.out.println(splitLargestSum(arr,m));
-    }
-  
-  
-    public static int splitLargestSum(int[] arr,int m){
-      int left = 0 ;
-      int right = 0;
-      for(int i =0;i<arr.length;i++){
-        left = Math.max(left,arr[i]);  // MIN sum of subarray  
-        right += arr[i];  // MAX sum of subarray
-      }
-     
-  
-  
-      while(left < right){
-          int mid = left + (right-left)/2;
-  
-          // calculate how many pieces we can divide the array..
-          int sum = 0 ;
-          int pieces = 1 ;
-          for(int num : arr){
-              if(sum + num > mid){ 
-                // if this is the condition, we cannot add this to subarray. 
-                // then we need to add this in another subarray.
-                 sum = num;
-                 pieces++;
-              }
-              else{
-                sum += num;
-              }
-          }
-  
-          if(pieces > m ){
-            left = mid +1 ;
-          }else{
-            right = mid;
-          }
-      }
-      return right;
-    }
+    System.out.println(splitLargestSum(arr, m));
   }
-  
+
+  public static int splitLargestSum(int[] arr, int m) {
+    int left = 0;
+    int right = 0;
+    for (int i = 0; i < arr.length; i++) {
+      left = Math.max(left, arr[i]); // MIN sum of subarray
+      right += arr[i]; // MAX sum of subarray
+    }
+
+    while (left < right) {
+      int mid = left + (right - left) / 2;
+
+      // calculate how many pieces we can divide the array..
+      int sum = 0;
+      int pieces = 1;
+      for (int num : arr) {
+        if (sum + num > mid) {
+          // if this is the condition, we cannot add this to subarray.
+          // then we need to add this in another subarray.
+          sum = num;
+          pieces++;
+        } else {
+          sum += num;
+        }
+      }
+
+      if (pieces > m) {
+        left = mid + 1;
+      } else {
+        right = mid;
+      }
+    }
+    return right;
+  }
+}

@@ -175,6 +175,8 @@ They have slower access times compared to arrays because elements are not stored
 # Stack 
 A Stack is a linear data structure that follows the LIFO (Last In, First Out) principle. This means that the last element added to the stack is the first one to be removed. It can be visualized as a stack of plates where the plate placed last is the first one you take out.
 <br>
+In java Stack is an inbuilt class.
+<br>
 
 # Key Operations in Stack:
 <br>
@@ -201,13 +203,21 @@ Undo Mechanism: Many applications, such as text editors, use stacks to implement
 <br>
 Undo Mechanism: Many applications, such as text editors, use stacks to implement undo/redo functionality.
 
+<br>
+
 # Queues :
 A Queue is a linear data structure that follows the FIFO (First In, First Out) principle. This means that the first element added to the queue will be the first one to be removed, similar to a real-world queue (like waiting in line for a movie ticket).
-
-# Key Operations in Queue:
-enqueue(item): or add() : Adds an item to the rear (end) of the queue.
 <br>
-dequeue(): or  remove() :  Removes and returns the item from the front of the queue.
+In java Queue is an inbuilt interface.
+<br>
+We can implements it into two ways :
+1. Using Linked List(prefer)
+2. Using array
+
+# Key Operations in Queue using LinkedList:
+add(item) : Adds an item to the rear (end) of the queue.
+<br>
+remove() :  Removes and returns the item from the front of the queue.
 <br>
 peek(): Returns the front item without removing it.
 <br>
@@ -235,4 +245,36 @@ Buffer Management: Queues are used in buffering applications like handling reque
 Real-Time Systems: Queues help in managing tasks that must be processed in the order they arrive, such as in CPU task scheduling or network packet management.
 
 
-# when we use Dequeue ?
+
+# When we use stack and Queues ?
+1. when we want to store the answer so far.
+2. when we have a group of elements inside a particular data structure for a period of time.
+3. Used In Trees.
+4. Used in VFX.
+5. When we convert recursion program to iteration then we also use stack and queues.
+
+
+# Deque :
+A Deque (short for Double-Ended Queue) is a linear data structure that allows the addition and removal of elements from both ends (front and rear). It can function as both a queue (FIFO) and a stack (LIFO), depending on how you use it.
+<br>
+In java Deque is an inbuilt interface.  
+
+# Key Operations in Deque:
+addFirst(item): Adds an item to the front of the deque.
+addLast(item): Adds an item to the rear of the deque.
+removeFirst(): Removes and returns the item from the front of the deque.
+removeLast(): Removes and returns the item from the rear of the deque.
+peekFirst(): Returns the front item without removing it.
+peekLast(): Returns the rear item without removing it.
+isEmpty(): Checks if the deque is empty.
+size(): Returns the number of elements in the deque.
+
+
+# Why Use a Deque?
+Flexibility: A deque provides more flexible data management than a simple queue or stack since you can add or remove elements from both ends.
+Optimal for Both Queue and Stack Operations: It can serve as both a queue (FIFO) and a stack (LIFO), allowing operations from both ends.
+Sliding Window Algorithms: Deques are used in sliding window algorithms where elements at both ends need to be added or removed, such as finding the maximum or minimum element within a sliding window.
+Palindrome Checking: Deques are useful when checking if a word is a palindrome because you can compare characters from both ends.
+
+<br>
+It is also used in tree.
