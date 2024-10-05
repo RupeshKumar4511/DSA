@@ -204,6 +204,10 @@ Undo Mechanism: Many applications, such as text editors, use stacks to implement
 Undo Mechanism: Many applications, such as text editors, use stacks to implement undo/redo functionality.
 
 <br>
+We can implements it into two ways :
+1. Using Linked List
+2. Using array
+
 
 # Queues :
 A Queue is a linear data structure that follows the FIFO (First In, First Out) principle. This means that the first element added to the queue will be the first one to be removed, similar to a real-world queue (like waiting in line for a movie ticket).
@@ -215,9 +219,9 @@ We can implements it into two ways :
 2. Using array
 
 # Key Operations in Queue using LinkedList:
-add(item) : Adds an item to the rear (end) of the queue.
+enqueue(in case of array) or add(item) (in linked list) : Adds an item to the rear (end) of the queue.
 <br>
-remove() :  Removes and returns the item from the front of the queue.
+dequeue(in case of array) or remove() (in linked list):  Removes and returns the item from the front of the queue.
 <br>
 peek(): Returns the front item without removing it.
 <br>
