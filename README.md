@@ -73,8 +73,8 @@ Auxiliary Space is the extra space or temporary space used by an algorithm.
 Space Complexity of an algorithm is total space taken by the algorithm with respect to the input size. Space Complexity includes both Auxiliary space and space used by input. 
 
 <br> 
-In Space Complexity we always looks at the extra space  
-
+While designig an algorithm, we always looks at the extra space (Auxiliary Space) 
+in Space Complexity
 
 
 
@@ -95,28 +95,30 @@ Every function call will take some memory in the stack whether it is same or dif
 <br>
 2. Generalise the relation or we can say find the recursive case/recursion relation.
 <br>
-3. Draw the recursion tree.
+3. find the base case.
 <br>
-4. About the tree: 
+4. Draw the recursion tree.
+<br>
+5. About the tree: 
 (I) See the flow of function, how they are getting into stack.
 <br>
 (II) Identify and focus on left tree calls and right tree calls.
 <br>
 Remember : Always left function will called first.
 <br>
-5. See how values and what type of values are returned at each steps. See where the function call will come out. In the end we will come out of main function.
-<br>
+6. See how values and what type of values are returned at each steps. See where the function call will come out. In the end we will come out of main function.
 
-6. find the base case.
+
+
 
 # Working with variables in Recursion :
 There are three types of variables in Recursion program.
 <br>
 1. Arguments 
-<br>
+
 2. Return type 
-<br>
-3. In the function of body 
+
+3. In the body of function  
 
 # 
 
@@ -133,7 +135,20 @@ Space Complexity of recursive Algorithm wil be equal to the height of the tree o
 for ex : Space Complexity of an fibonacci no is O(n).
 
 
-
+# Limitaiton of Recursion :
+Recursion, while powerful, has several limitations that can make it less suitable for certain problems. Here are the key limitations of recursion:
+<br>
+1. Risk of Stack Overflow
+Each recursive function call uses a stack frame for storage of variables, return address, etc.
+Deep recursion can lead to stack overflow errors, especially if the recursion depth exceeds the call stack size.
+2. High Memory Usage
+Recursive functions can consume more memory than iterative solutions because of the overhead associated with maintaining multiple stack frames.
+3. Slower Execution
+Recursion often involves repeated function calls, which can be slower than equivalent iterative solutions due to the overhead of function invocation.
+4. Harder to Debug
+Debugging recursive functions can be challenging because of multiple function calls, which makes it difficult to trace the flow and state of variables at different levels of recursion.
+5. Risk of Infinite Recursion
+If the base case is not correctly defined or never reached, recursion can lead to infinite function calls, causing the program to crash.
 
 # Array:
 1.fixed size.
@@ -292,14 +307,28 @@ Function Call Management: The call stack in a program keeps track of function ca
 Backtracking Algorithms: Stacks are used in algorithms like Depth-First Search (DFS) for graph traversal or maze solving, as they help in backtracking.
 <br>
 Expression Evaluation: In compilers and interpreters, stacks are used to evaluate expressions and parse syntax.
-Undo Mechanism: Many applications, such as text editors, use stacks to implement undo/redo functionality.
 <br>
-Undo Mechanism: Many applications, such as text editors, use stacks to implement undo/redo functionality.
+Undo Mechanism: Many applications, such as text editors, use stacks to implement undo/redo functionality. 
 
 <br>
 We can implements it into two ways :
 1. Using Linked List
 2. Using array
+
+# Disadvantages of Stack :
+1. Limited Access
+Only the top element is accessible at any given time, making it unsuitable for problems that require random or indexed access to elements.
+2. Stack Overflow
+In static or limited-size stacks (e.g., using arrays), exceeding the stack's predefined size results in a stack overflow error.
+This can also occur in programming when deep recursion consumes too much stack memory.
+3. Underflow
+Attempting to pop an element from an empty stack results in a stack underflow error, making it critical to handle edge cases explicitly.
+4. Inefficient for Large Data
+Stacks are not optimized for managing large data sets. Deep recursion or excessive stack usage can cause significant memory usage, leading to inefficiency or program crashes.
+5. No Random Access
+Unlike arrays or other data structures like lists, stacks do not allow access to elements in the middle or bottom without popping all preceding elements.
+6. Restricted Operations
+The stack's LIFO nature imposes strict limitations on operations, making it unsuitable for tasks requiring flexibility, such as insertion or deletion in arbitrary positions.
 
 
 # Queues :
@@ -376,3 +405,16 @@ Palindrome Checking: Deques are useful when checking if a word is a palindrome b
 <br>
 It is also used in tree.
 
+# Disadvantages of Queues :
+1. Limited Access
+Queues follow the FIFO (First In, First Out) principle, so only the front and rear elements are accessible at any time. Random access to other elements is not possible.
+2. Inefficient in Static Implementations
+In a static array-based queue, when elements are dequeued, the unused space at the front cannot be reused unless specifically managed (e.g., via circular queues).
+This can lead to memory wastage or require manual shifting of elements, which is inefficient.
+3. Potential Overflow and Underflow
+Overflow occurs if the queue exceeds its predefined capacity in static implementations.
+Underflow occurs when dequeueing from an empty queue. These conditions require additional handling in algorithms.
+4. Inefficiency in Searching
+Searching for an element in a queue requires traversing it from front to rear, which is time-consuming compared to data structures like arrays or hash tables.
+5. Memory Overhead in Linked Implementations
+In a linked list-based queue, additional memory is required to store pointers, increasing overhead compared to array-based queues.

@@ -27,7 +27,7 @@ public class SearchOperations {
      * is variable that indicates the starting point)
      * becomes mid(where mid of the array)-1 and if it is smaller then right (where
      * right is a variable that upto which ckecking the target is done)
-     * becomes mid - 1;
+     * becomes mid + 1;
      * 
      * In the best case , its time complexity is O(1) i.e elements found at the mid
      * index;

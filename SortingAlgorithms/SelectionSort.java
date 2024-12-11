@@ -1,6 +1,6 @@
 package SortingAlgorithms;
 
-/*SelectionSort Algorithm : we firstly assume first element of array as minimum and then compare the 
+/*SelectionSort Algorithm : we firstly assume first element of array as smallest and then compare the 
 first element with all other elemnt of array . If any other element is smaller than first element 
 then change the minimum index (minmumIndex is a variable that stores index of minimum element).
 After that swap the first value with the minimum value and so on.

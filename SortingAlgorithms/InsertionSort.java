@@ -21,7 +21,7 @@ public class InsertionSort {
         for(int i=1; i<arr.length; i++){
             key = arr[i];
             j = i-1;
-            while (j>=0 && arr[j]>key) {
+            while (j>=0 && arr[j]>key) {// This is because before moving to next element we need to ensure that previous element is sorted. This condition check the previous element is sorted or not 
                 arr[j+1]= arr[j];
                 j--;
             }
