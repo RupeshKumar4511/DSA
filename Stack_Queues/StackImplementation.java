@@ -1,4 +1,3 @@
-package Stack_Queues;
 import java.util.Stack;
 public class StackImplementation {
 

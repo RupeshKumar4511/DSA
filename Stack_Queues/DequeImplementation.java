@@ -1,5 +1,3 @@
-package Stack_Queues;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 

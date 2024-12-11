@@ -25,13 +25,115 @@ It is the steps to solve a particular problem.
 
 # Time Complexity :
 It is measures of how running time of an algorithm increases with the size of input data.
-<br>
 
+<br>
+It is a mathematical function that gives the relationship about how running time of an algorithm increases with the size of input data.
+
+<br>
 Important Point :
-Time Complexity of a good/best Algorithm should be in O(log n) to O(1) where O is Big O notation.
-Here O(1) is a constant time complexity and its example is like  element found at 0 index .
+Time Complexity of a good/best Algorithm should be in between O(log n) to O(1) where O is Big O notation.
+Here O(1) is a constant time complexity and its example is like element found at 0 index in linear search algorithm.
 <br>
 Time Complexity always depends on the no of steps in an algorithm.
+<br>
+While designing an algorithm always look at the worst case of Time Complexity.
+<br>
+While designing an algorithm always look at the Complexity for large data.
+<br>
+In Time Complexity constants are always ignore.
+ex=> O(2n + 5) then here we ignore 2 and 5.
+<br>
+In Time Complexity less dominating terms are always ignore.
+ex=> O(N^3 + N^2 + N) then we ignore N^2 and N.
+<br>
+
+
+# Big O 
+It is the Upper bound of time complexity means that time complexity of an algorithm will never exceeds the value present inside
+Big O(). 
+<br>
+
+# Big Omega 
+It is the lower bound of time complexity means that time complexity of an algorithm will have atleast the value present inside Omega().
+
+
+# Theta notation
+It is combination of both upper and lower bound of time complexity.
+
+# Little O notation :
+It is loose upper bound . 
+
+# Little Omega notation :
+It is loose lower bound . 
+
+# Space/Auxiliary Complexity :
+Auxiliary Space is the extra space or temporary space used by an algorithm.
+
+<br>
+Space Complexity of an algorithm is total space taken by the algorithm with respect to the input size. Space Complexity includes both Auxiliary space and space used by input. 
+
+<br> 
+In Space Complexity we always looks at the extra space  
+
+
+
+
+# Recursion :
+Method calling itself until a base condintion is reached  is called Recursion.
+<br>
+Imp Point : when the function is not fininshed execution it will remains in stack.
+<br>
+when a function finishes executing it is removed from stack and the flow of program is restored to where the function was called.
+<br>
+Every function call will take some memory in the stack whether it is same or different.
+<br>
+
+
+# Steps for Solving a problem using Recursion :
+
+1. Break the problems into sub-problems and find the relation between problems(outer method) and subproblems(inner method which will be called in the the same outer method).
+<br>
+2. Generalise the relation or we can say find the recursive case/recursion relation.
+<br>
+3. Draw the recursion tree.
+<br>
+4. About the tree: 
+(I) See the flow of function, how they are getting into stack.
+<br>
+(II) Identify and focus on left tree calls and right tree calls.
+<br>
+Remember : Always left function will called first.
+<br>
+5. See how values and what type of values are returned at each steps. See where the function call will come out. In the end we will come out of main function.
+<br>
+
+6. find the base case.
+
+# Working with variables in Recursion :
+There are three types of variables in Recursion program.
+<br>
+1. Arguments 
+<br>
+2. Return type 
+<br>
+3. In the function of body 
+
+# 
+
+
+
+
+# Space and Time complexity of Recursive Algorithm :
+Important Point : 
+<br>
+Only the function calls that are interlinked will be in the stack at the same time.
+<br>
+Space Complexity of recursive Algorithm wil be equal to the height of the tree or we can say the longest chain of the recursion tree.
+<br> 
+for ex : Space Complexity of an fibonacci no is O(n).
+
+
+
 
 # Array:
 1.fixed size.
@@ -124,15 +226,6 @@ Properties:
 <br>
 10.contains(Object o): Returns true if the list contains the specified element.
 
-
-
-
-# 3 Steps for Recursion :
-1. find the base case.
-<br>
-2. find the relation between problems(outer method) and subproblems(inner method which wiil be called in the the same outer merhod).
-<br>
-3. Generalise the relation.
 
 
 
@@ -282,3 +375,4 @@ Palindrome Checking: Deques are useful when checking if a word is a palindrome b
 
 <br>
 It is also used in tree.
+

@@ -1,4 +1,3 @@
-package Stack_Queues;
 class CustomStackException extends Exception {
     public CustomStackException(String message) {
         super(message);
@@ -9,21 +8,19 @@ class CustomStackException extends Exception {
 public class StackUsingLinkedList {
 
     Node head = null;
-    Node tail = null;
-    int size = 0;
+    
 
     public void add(int data) {
         Node node = new Node(data);
 
         if (head == null) {
             head = node;
-            tail = node;
-            size++;
+        
         } else {
 
-            tail.next = node;
-            tail = node;
-            size++;
+            node.next = head;
+            head = node;
+    
 
         }
 
@@ -32,20 +29,10 @@ public class StackUsingLinkedList {
     public int pop() throws CustomStackException {
         if (head == null) {
             throw new CustomStackException("Queue is empty");
-        }else if(head == tail){
-            Node temp = head;
-            head = null;
-            tail = null;
-            return temp.data;
         }
         Node temp = head;
-        while(temp.next.next != null){
-             temp = temp.next;
-        }
-        temp.next = null;
-        Node temp2 = tail;
-        tail = temp;
-        return temp2.data;
+        head = head.next;
+        return temp.data;
     }
 
     public void display() throws CustomStackException {
@@ -54,7 +41,7 @@ public class StackUsingLinkedList {
         }
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data + "->");
+            System.out.print(temp.data + "<-");
             temp = temp.next;
         }
     }
@@ -63,7 +50,7 @@ public class StackUsingLinkedList {
         if (head == null) {
             throw new CustomStackException("Queue is empty");
         }
-        return tail.data;
+        return head.data;
     }
 
     class Node {
@@ -99,4 +86,3 @@ public class StackUsingLinkedList {
     }
 
 }
-
