@@ -1,3 +1,24 @@
+// import java.util.Arrays;
+
+// public class Practice1 {
+
+//   public static void main(String[] args) {
+//     int[] arr1 = {1,3,34};
+//     int[] arr2 = {54,56,31};
+//     int[] arr3 = new int[(arr1.length+arr2.length)];
+//     int k = arr1.length ;
+//     for(int i = 0;i<arr1.length;i++){
+//       arr3[i] = arr1[i];
+//     }
+//     for(int j = 0 ; j<arr2.length;j++){
+//       arr3[k]  = arr2[j];
+//       k++; 
+//     }
+//     System.out.println(Arrays.toString(arr3));
+
+
+//   }
+// }
 // Que 1. Given an array A as integer we need to find the leaders in the array. A
 //  elements is said to be leader if it is greater than or equal to its all
 //  elements to right side.

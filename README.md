@@ -15,7 +15,7 @@ Example: array.
 Example: Queue, Stack, etc.
 <br>
 <br>
-4.Non-Linear Data Structure: Data structures where data elements are not placed sequentially or linearly are called non-linear data structures. In a non-linear data structure, we can’t traverse all the elements in a single run only. 
+4.Non-Linear Data Structure: Data structures where data elements are not placed sequentially or linearly are called non-linear data structures. In a non-linear data structure, we can't traverse all the elements in a single run only. 
 Examples: Trees and Graphs.
 
 
@@ -58,7 +58,7 @@ It is the lower bound of time complexity means that time complexity of an algori
 
 
 # Theta notation
-It is combination of both upper and lower bound of time complexity.
+It is average bound or we can say combination of both upper and lower bound of time complexity.
 
 # Little O notation :
 It is loose upper bound . 
@@ -74,14 +74,25 @@ Space Complexity of an algorithm is total space taken by the algorithm with resp
 
 <br> 
 While designig an algorithm, we always looks at the extra space (Auxiliary Space) 
-in Space Complexity
+in Space Complexity.
 
+# Divide and Conquer :
+Break the problems into sub-problems and find the solution for each subproblems and then combine these solution to obtain a final solution. 
+<br>
+Imp Point : 
+<br>
+In Divide and conquer rule, the subproblems are of same type . like if we have a problem of sorting an large array then after dividing the problem into subproblems then every subproblems must perform the sorting function.
+<br>
+So, this how it is recursive in nature. 
+<br>
+And another important point is that we should have method of combining the solutions of subproblems into final solution. 
+<br> 
 
 
 # Recursion :
-Method calling itself until a base condintion is reached  is called Recursion.
+Method calling itself until a base condintion is reached, is called Recursion.
 <br>
-Imp Point : when the function is not fininshed execution it will remains in stack.
+Imp Point : Until the function is not fininshed its execution it will remains in stack.
 <br>
 when a function finishes executing it is removed from stack and the flow of program is restored to where the function was called.
 <br>
@@ -100,6 +111,7 @@ Every function call will take some memory in the stack whether it is same or dif
 4. Draw the recursion tree.
 <br>
 5. About the tree: 
+<br>
 (I) See the flow of function, how they are getting into stack.
 <br>
 (II) Identify and focus on left tree calls and right tree calls.
@@ -114,15 +126,14 @@ Remember : Always left function will called first.
 # Working with variables in Recursion :
 There are three types of variables in Recursion program.
 <br>
-1. Arguments 
+1. Arguments : 
+Make sure that those variable which will be used in the next/future function call, they wiil be passed as arguments.
 
-2. Return type 
+2. Return type :
+Make sure that all the subfunctions that calling the same function must return and of the same type of data as defined in the functions.
 
-3. In the body of function  
-
-# 
-
-
+3. In the body of function  :
+Those variables which will not be used in the next/future function call and specific to a function call then they will be used in the body of the function and will not passed as arguments.
 
 
 # Space and Time complexity of Recursive Algorithm :
@@ -184,6 +195,10 @@ ex: int[][] arr = new int[2][];
 3.When you need a simple and straightforward data structure with minimal overhead(in terms of memory and time).
 <br>
 
+# Stable and Unstable Sorting Algorithm :
+Stable Sorting Algorithm : These are the algorithm in which original order is preserved for the values that are equal . 
+<br>
+Unstable Sorting Algorithm : These are the algorithm in which original order is not  preserved for the values that are equal . 
 
 # Types of array on the basis of memory allocation:
 1.Static array :These are such arrays whose size is fixed but they allocates memory at run time.
