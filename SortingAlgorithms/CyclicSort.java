@@ -4,7 +4,9 @@ package SortingAlgorithms;
  * 
  * Important Point: 
  * When the values are given in a range even if it is jumbled : 
- * After sort : correct_index of element = element's value - 1; 
+ * After sort(in case of range [1,n]) : correct_index of element = element's value - 1; 
+ * 
+ * After sort(in case of range [0,n]) : correct_index of element = element's value ; 
  * 
  * In this algorithm we check the element is at correct index or not.
  * if not then swap the first value with its correct index. 
@@ -12,7 +14,7 @@ package SortingAlgorithms;
  * first position may or may not be sorted so we need to again check it and then move 
  * to next element to sort it.  
  * 
- * In worst case total no of comparison is (2N -1 ) and total swaps made is (N-1).
+ * In worst case total no of comparison is (2N - 1 ) and total swaps made is (N-1).
  * Time Complexity: 
  * Worst Case : O(n)
  * Best Case : O(n)
