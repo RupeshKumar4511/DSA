@@ -332,6 +332,7 @@
 
 
 // Find the GCD/HCF of two number . 
+// Euclidians Algorithms
 // public class Practice1 {
 
 //     public int gcd(int a,int b){
