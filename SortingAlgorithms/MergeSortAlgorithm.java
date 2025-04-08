@@ -26,6 +26,9 @@ Get the both parts sorted via recursion and then merge both parts.
 
 Time Complexity : O (n * log(n))
 Space Complexity : O(n)
+
+MergeSort is better in linkedList due to non continuous memory allocation. 
+
 */
 
 // This is not a inplace algorithm because here we are returning new sorted array while the original remains same . 

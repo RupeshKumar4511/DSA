@@ -199,6 +199,13 @@ ex: int[][] arr = new int[2][];
 Stable Sorting Algorithm : These are the algorithm in which original order is preserved for the values that are equal . 
 <br>
 Unstable Sorting Algorithm : These are the algorithm in which original order is not  preserved for the values that are equal . 
+<br>
+Inplace Algorithm : In these algorithms original array is changed instead of creating new array. 
+
+# Hybrid Sorting Algorithm :
+Tim Sort : It is a combination of MergeSort and Insertion Sort which is used in python sort inbuilt method. 
+<br>
+Insertion Sort is used because it works well with partially sorted data. 
 
 # Types of array on the basis of memory allocation:
 1.Static array :These are such arrays whose size is fixed but they allocates memory at run time.
