@@ -99,7 +99,7 @@
 
 
 
-// Another way to do this which has O(N(log(log N))) time complexity 
+// Another way to do this which has O(N*(log(log N))) time complexity 
 
 
 // The "Sieve of Eratosthenes" is named after the ancient Greek mathematician Eratosthenes, who is credited with developing this method for finding prime numbers by systematically eliminating multiples of each prime number, essentially "sifting out" the non-primes, similar to how a sieve filters out particles based on size; hence the name "sieve" in reference to his method.

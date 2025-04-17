@@ -263,7 +263,10 @@ Properties:
 <br>
 10.contains(Object o): Returns true if the list contains the specified element.
 
+# List : 
+List<Integer> list = new ArrayList<>();
 
+// methods are same in ArrayList.
 
 
 # Linked List :
@@ -302,6 +305,50 @@ They require more memory per node because of the extra reference pointer.
 <br>
 They have slower access times compared to arrays because elements are not stored in contiguous memory, so you must traverse the list to find an element.
 
+# Inbuilt LinkedList : 
+```bash 
+
+import java.util.LinkedList;
+
+
+// Create a LinkedList:
+
+LinkedList<String> list = new LinkedList<>();
+
+📚 Commonly Used Methods in LinkedList:
+
+🔹 Adding Elements
+
+list.add("A");               // Add to end
+list.addFirst("Start");      // Add at beginning
+list.addLast("End");         // Add at end
+list.add(1, "Middle");       // Add at specific index
+
+🔹 Removing Elements
+
+list.remove();               // Removes first element
+list.remove("A");            // Removes specific element
+list.removeFirst();          // Removes first
+list.removeLast();           // Removes last
+list.clear();                // Removes all elements
+🔹 Accessing Elements
+
+String first = list.getFirst();    // First element
+String last = list.getLast();      // Last element
+String atIndex = list.get(1);      // Element at index 1
+🔹 Checking Contents
+
+list.contains("A");          // true if "A" is in the list
+list.isEmpty();              // true if list is empty
+list.size();                 // number of elements
+🔹 Iterating
+
+for (String item : list) {
+    System.out.println(item);
+}
+
+
+```
 # Stack 
 A Stack is a linear data structure that follows the LIFO (Last In, First Out) principle. This means that the last element added to the stack is the first one to be removed. It can be visualized as a stack of plates where the plate placed last is the first one you take out.
 <br>
@@ -336,6 +383,32 @@ Undo Mechanism: Many applications, such as text editors, use stacks to implement
 We can implements it into two ways :
 1. Using Linked List
 2. Using array
+
+# Inbuilt Stack : 
+```bash 
+import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+        Stack<String> stack = new Stack<>();
+
+        stack.push("A");
+        stack.push("B");
+        stack.push("C");
+
+        System.out.println("Stack: " + stack);     // [A, B, C]
+        System.out.println("Top: " + stack.peek()); // C
+
+        stack.pop(); // removes C
+        System.out.println("After pop: " + stack); // [A, B]
+
+        System.out.println("Is empty? " + stack.isEmpty()); // false
+        System.out.println("Size: " + stack.size());        // 2
+        System.out.println("Search A: " + stack.search("A")); // 2
+    }
+}
+
+```
 
 # Disadvantages of Stack :
 1. Limited Access
@@ -392,7 +465,31 @@ Buffer Management: Queues are used in buffering applications like handling reque
 <br>
 Real-Time Systems: Queues help in managing tasks that must be processed in the order they arrive, such as in CPU task scheduling or network packet management.
 
+# Inbuilt Queues :
+```bash 
+import java.util.*;
 
+public class QueueExample {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+
+        queue.offer("A");
+        queue.offer("B");
+        queue.offer("C");
+
+        System.out.println("Queue: " + queue);      // [A, B, C]
+        System.out.println("Head: " + queue.peek()); // A
+
+        queue.poll(); // Removes "A"
+        System.out.println("After poll: " + queue); // [B, C]
+
+        System.out.println(queue.size());  
+
+        System.out.println(queue.isEmpty());
+    }
+}
+
+```
 
 # When we use stack and Queues ?
 1. when we want to store the answer so far.
@@ -427,6 +524,39 @@ Palindrome Checking: Deques are useful when checking if a word is a palindrome b
 <br>
 It is also used in tree.
 
+# Inbuilt Deque
+```bash
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+Deque<String> deque= new ArrayDeque<>();
+
+deque.addFirst(e)	// Add to the front (throws exception if full)
+deque.addLast(e)	// Add to the back (same as add(e))
+deque.offerFirst(e)	// Add to front (returns false if full)
+deque.offerLast(e)	// Add to back (returns false if full)
+
+
+removeFirst()	Remove from front (throws exception if empty)
+removeLast()	Remove from back
+pollFirst()	Remove from front (returns null if empty)
+pollLast()	Remove from back
+
+
+
+getFirst()	Get front element (throws exception if empty)
+getLast()	Get last element
+peekFirst()	Get front element (null if empty)
+peekLast()	Get last element (null if empty)
+
+
+deque.size();      // Number of elements
+deque.isEmpty();   // Check if it's empty
+deque.clear();     // Removes all elements
+deque.contains("X"); // Checks if "X" is in deque
+
+```
+
 # Disadvantages of Queues :
 1. Limited Access
 Queues follow the FIFO (First In, First Out) principle, so only the front and rear elements are accessible at any time. Random access to other elements is not possible.
@@ -442,7 +572,46 @@ Searching for an element in a queue requires traversing it from front to rear, w
 In a linked list-based queue, additional memory is required to store pointers, increasing overhead compared to array-based queues.
 
 
+# Stiring :
+```bash
+String email = "test@example.com";
+System.out.println(email.matches(".*@.*\\.com")); // true
 
+.* → zero or more characters
+
+\\. → escape the dot (. means any character in regex)
+
+
+.	Any character
+\\s	Whitespace
+\\S	Non-whitespace
+\\d	Digit
+\\D	Non-digit
+\\w	Word character (a-z, A-Z, 0-9, _)
+\\W	Non-word character
+^	Start of string
+$	End of string
+.*	Any number of any characters
+
+
+```
+
+# Inbuilt Priority Queue : 
+```bash 
+import java.util.PriorityQueue;
+
+PriorityQueue<Integer> minHeap = new PriorityQueue<>(); // Min-heap (default)
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder()); // Max-heap
+
+
+
+// Some useful methods. 
+add()	Inserts an element into the heap
+poll()	Removes and returns the head (min or max)
+peek()	Returns the head without removing it
+isEmpty()	Checks if the queue is empty
+size()	Returns number of elements in the heap
+```
 
 # Reference
 [github.com/Kunal-Kushwaha/DSA-Bootcamp](https://github.com/kunal-kushwaha/DSA-Bootcamp-Java)
