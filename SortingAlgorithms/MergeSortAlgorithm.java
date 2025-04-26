@@ -164,7 +164,7 @@ class MergeSortInplaceAlgorithm {
 
 
         for(int l = 0 ; l<mixArr.length;l++){
-            arr[start+l] = mixArr[l];
+            arr[start+l] = mixArr[l]; // important step
         }
       
 

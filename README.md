@@ -572,7 +572,7 @@ Searching for an element in a queue requires traversing it from front to rear, w
 In a linked list-based queue, additional memory is required to store pointers, increasing overhead compared to array-based queues.
 
 
-# Stiring :
+# String :
 ```bash
 String email = "test@example.com";
 System.out.println(email.matches(".*@.*\\.com")); // true

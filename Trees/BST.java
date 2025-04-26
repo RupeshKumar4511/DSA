@@ -69,6 +69,54 @@ public class BST {
         return Math.abs(height(node.left)-height(node.right))<= 1 && balanced(node.left) && balanced(node.right);
     }
 
+
+    public Node deleteNode(int value){
+        if(this.root == null){
+            return root;
+        }
+        root = deleteNode(this.root,value);
+
+        return root;
+    }
+
+
+
+        
+
+
+    private Node deleteNode(Node root, int value) {
+        if(root == null){
+            return root;
+        }else if(value > root.value){
+            root.right = deleteNode(root.right,value);
+        }else if(value < root.value){
+            root.left = deleteNode(root.left,value);
+        }else{
+            if(root.left == null){
+                return root.right;
+            }else if(root.right == null){
+                return root.left;
+            }else{
+                root.value = minValue(root);
+                root.right = deleteNode(root.right,value);
+            }
+        }
+
+        return root;
+
+      
+    }
+
+    private int minValue(Node root){
+        int minValue = root.value;
+        while (root.left!=null) {
+            minValue = root.left.value;
+            root = root.left;
+
+        }
+
+        return minValue;
+    }
     public void display(){
         if(this.root == null){
             System.out.println("Tree is empty");
@@ -96,8 +144,13 @@ public class BST {
         bst.insert(11);
         bst.insert(19);
         bst.insert(40);
+        bst.insert(13);
+        bst.insert(29);
+        bst.insert(10);
         bst.display();
         System.out.println(bst.balanced());
+        bst.deleteNode(12);
+        bst.display();
     }
 
 }

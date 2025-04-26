@@ -22,7 +22,7 @@ public class AVL {
             this.root = new Node(value);
             return;
         }
-         insert(this.root,value);
+        this.root = insert(this.root,value);
         
     }
 
