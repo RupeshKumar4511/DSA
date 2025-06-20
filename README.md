@@ -573,13 +573,57 @@ In a linked list-based queue, additional memory is required to store pointers, i
 
 
 # String :
+Various String methods : 
+<br>
 ```bash
+//Compares two strings for equality.
+
+s.equals("hello");           // true
+
+s.equalsIgnoreCase("HELLO"); // true
+
+
+
+// Lexicographically compares two strings.
+"a".compareTo("b");  // -1
+"c".compareTo("b");  // 1
+"b".compareTo("b");  // 0
+
+
+//Converts a string to a character array
+char[] chars = s.toCharArray();
+
+
+Splits a string into an array based on a regex (e.g., by spaces or commas).
+String[] words = s.split(" ");
+
+
+
+//Replaces characters or substrings.
+s.replace('l', 'x');           // "hexxo"
+s.replaceAll("l", "yy");       // "heyyyyo"
+
+
+
+//Checks if a string is empty or contains only whitespace.
+"".isEmpty();       // true
+"  ".isBlank();     // true
+
+
+
+//Checks if a string contains a specific sequence.
+s.contains("ell");  // true
+
+
+
+
+// Regex methods in string 
 String email = "test@example.com";
 System.out.println(email.matches(".*@.*\\.com")); // true
 
 .* → zero or more characters
 
-\\. → escape the dot (. means any character in regex)
+\\. → escape sequence characters to represent dot
 
 
 .	Any character
@@ -591,10 +635,70 @@ System.out.println(email.matches(".*@.*\\.com")); // true
 \\W	Non-word character
 ^	Start of string
 $	End of string
-.*	Any number of any characters
 
 
 ```
+# Various StringBuilder methods
+```bash 
+ Method                                     Description                                         
+ `append(String s)`                         Adds text to the end                                 `sb.append("abc");`         
+
+
+ `insert(int offset, String s)`             Inserts text at specified index                      `sb.insert(1, "xy");`       
+
+
+ `delete(int start, int end)`               Deletes characters from `start` to `end - 1`         `sb.delete(1, 3);`          
+
+
+ `deleteCharAt(int index)`                  Deletes the char at specified index                  `sb.deleteCharAt(2);`       
+
+
+ `reverse()`                                Reverses the string in-place                         `sb.reverse();`             
+
+
+ `replace(int start, int end, String str)`  Replaces chars from `start` to `end - 1` with `str`  `sb.replace(1, 3, "zz");`   
+
+
+ `charAt(int index)`                        Returns the char at index                            `sb.charAt(0);`             
+
+
+ `setCharAt(int index, char ch)`            Modifies the char at index                           `sb.setCharAt(0, 'X');`     
+
+
+ `toString()`                               Converts `StringBuilder` to `String`                 `String s = sb.toString();` 
+
+
+ `length()`                                 Returns current length                               `sb.length();`              
+
+
+ `capacity()`                               Returns current buffer capacity                      `sb.capacity();`            
+
+
+ `ensureCapacity(int minCapacity)`          Ensures a minimum capacity                           `sb.ensureCapacity(100);`   
+
+
+ `substring(int start, int end)`            Similar to `String.substring()`                      `sb.substring(0, 3);`       
+
+
+                    
+```
+
+# Character : 
+Various Charactor Wrapper class methods in java. 
+<br>
+```bash 
+
+| Method                      | Description                 |
+| --------------------------- | --------------------------- |
+| `Character.isLetter(ch)`    | Checks if `ch` is a letter  |
+| `Character.isDigit(ch)`     | Checks if `ch` is a digit   |
+| `Character.isUpperCase(ch)` | Checks if `ch` is uppercase |
+| `Character.isLowerCase(ch)` | Checks if `ch` is lowercase |
+| `Character.toUpperCase(ch)` | Converts to uppercase       |
+| `Character.toLowerCase(ch)` | Converts to lowercase       |
+
+```
+
 
 # Inbuilt Priority Queue : 
 ```bash 

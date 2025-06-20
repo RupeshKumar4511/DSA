@@ -16,7 +16,6 @@
 //     }
 //     System.out.println(Arrays.toString(arr3));
 
-
 //   }
 // }
 // Que 1. Given an array A as integer we need to find the leaders in the array. A
@@ -749,8 +748,8 @@ public class Practice {
     int left = 0;
     int right = 0;
     for (int i = 0; i < arr.length; i++) {
-      left = Math.max(left, arr[i]); // MIN sum of subarray
-      right += arr[i]; // MAX sum of subarray
+      left = Math.max(left, arr[i]); // minimum possible largest sum
+      right += arr[i]; // maximum possible largest sum
     }
 
     while (left < right) {
