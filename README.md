@@ -168,16 +168,16 @@ If the base case is not correctly defined or never reached, recursion can lead t
 <br>
 3.Negative indexing is not allowed.
 <br>
-4.array objects are stored in heap.As heap objects are not continuous so array may not be continuous .It depends on the JVM.
+4.array objects are stored in heap. As heap objects are not continuous so array may not be continuous. It depends on the JVM.
 <br>
-5. In array of objects like array containing String value , each the elements in the array is itself a object and it is saved in different locations in heap memory and these elements providing the reference to the array.
+5. In array of objects like array containing String value, each elements in the array is itself a object and it is saved in different locations in heap memory and these elements providing the reference to the array.
 <br>
 6. In multidimensional array , specify the column is not necessary but rows is mendatory.
 ex: int[][] arr = new int[2][];
 <br>
 7.length of an array can be calculated by (arr.length).
 <br>
-8. Arrays are mutable . It means we can modify the element of an array using index . ex : arr[0]=34;
+8. Arrays are mutable. It means we can modify the element of an array using index. ex : arr[0]=34;
 <br>
 9. Elements of an array can be accessed using index value.
 <br>
@@ -186,6 +186,10 @@ ex: int[][] arr = new int[2][];
 11.Insertion,deletion and search an element (if index is not known) in an array is very costly(in term of time).
 <br>
 12. Array is not thread safe.(A thread is a lightweight process that allows for concurrent execution of code.In java Threads operates asynchronously.)
+<br>
+Inside global scope, the maximum size of array is 10^7. 
+and inside local scope, the maximum size is 10^6. 
+
 
 # When to use Array:
 1.When we need fast access to elements using an index.
@@ -252,7 +256,7 @@ Properties:
 4.set(int index, E element): Replaces the element at the specified position in the list with the specified element.
 <br>
 5.remove(int index): Removes the element at the specified position in the list.
-
+<br>
 6.remove(Object o): Removes the first occurrence of the specified element from the list, if it is present.
 <br>
 7.size(): Returns the number of elements in the list.
@@ -639,6 +643,7 @@ $	End of string
 
 ```
 # Various StringBuilder methods
+
 ```bash 
  Method                                     Description                                         
  `append(String s)`                         Adds text to the end                                 `sb.append("abc");`         

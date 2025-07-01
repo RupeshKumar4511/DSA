@@ -1,3 +1,51 @@
+
+// Second Largest Element : 
+
+// public class Practice1 {
+
+//     public static void main(String[] args) {
+//         int[] arr  = {2,32,13,434,563,563,34};
+//         int secondLargets = Integer.MIN_VALUE;
+//         int firstLargest = arr[0];
+//         for(int i = 0 ;i <arr.length-1;i++){
+//             if(arr[i]>firstLargest){
+//                 secondLargets = firstLargest;
+//                 firstLargest= arr[i];
+//             }
+//             else if(arr[i]<firstLargest&& arr[i]> secondLargets){
+//                 secondLargets = arr[i];
+//             }
+//         }
+
+//         System.out.println(secondLargets);
+//     }
+// }
+
+
+// Remove the duplicates inplace from the sorted array. 
+ 
+// import java.util.Arrays;
+
+// public class Practice1 {
+
+//     public static void main(String[] args) {
+//         int[] arr  = {1,1,2,2,2,4,4};
+
+//         int i = 0 ;
+//         for(int j = 1; j<arr.length-1;j++){
+//             if(arr[j] != arr[i]){
+//                 i++;
+//                 arr[i] = arr[j];
+//             }
+//         }
+
+//         System.out.println(Arrays.toString(arr));
+        
+//     }
+// }
+
+
+
 // import java.util.Arrays;
 
 // public class Practice1 {
@@ -18,6 +66,8 @@
 
 //   }
 // }
+
+
 // Que 1. Given an array A as integer we need to find the leaders in the array. A
 //  elements is said to be leader if it is greater than or equal to its all
 //  elements to right side.
