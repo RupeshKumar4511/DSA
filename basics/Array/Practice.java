@@ -1,4 +1,3 @@
-
 // Second Largest Element : 
 
 // public class Practice1 {
@@ -46,6 +45,79 @@
 
 
 
+
+// left rotate by D place 
+
+// import java.util.Arrays;
+
+// public class Practice1{
+
+//     public static void reverse(int[] arr, int start,int end){
+
+//      while (start<=end) {
+//         int temp = arr[start];
+//         arr[start]= arr[end];
+//         arr[end]= temp;
+//         start++;
+//         end--;
+//      }
+// }
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3,4,5,6,7};
+//         int dplace= 22;
+//         int d =  dplace%arr.length; 
+//         int n = arr.length-1;
+        
+//         reverse(arr,0,d-1);
+//         reverse(arr, d, n);
+//         reverse(arr, 0, n);
+//         System.out.println(Arrays.toString(arr));
+//     }
+// }
+
+
+
+// Optimal solution : Move zeroes to end of array.
+
+// import java.util.Arrays;
+
+// public class Practice1{
+
+//     public static void swap(int [] arr,int first,int second){
+//         int temp = arr[first];
+//         arr[first] = arr[second];
+//         arr[second]= temp;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,0,3,4,0,5,6,0,7,0,0};
+//         int n = arr.length-1;
+//         int j = -1;
+//         for(int i =0 ;i<n;i++){
+//             if(arr[i]== 0){
+//                 j= i ;
+//                 break;
+//             }
+//         }
+
+//         for(int k = j+1;k<n;k++){
+//             if(arr[k]!=0){
+//                 swap(arr,k,j);
+//                 j ++;
+//             }
+//         }
+        
+//         System.out.println(Arrays.toString(arr));
+//     }
+// }
+
+
+
+
+
+
+// concating two array. 
+
 // import java.util.Arrays;
 
 // public class Practice1 {
@@ -66,6 +138,7 @@
 
 //   }
 // }
+
 
 
 // Que 1. Given an array A as integer we need to find the leaders in the array. A
@@ -124,6 +197,106 @@
 //       return max;
 //     }
 //   }
+
+
+// Move zeroes of an array to its end. 
+// import java.util.Arrays;
+
+// public class Practice1{
+
+//     public static void swap(int [] arr,int first,int second){
+//         int temp = arr[first];
+//         arr[first] = arr[second];
+//         arr[second]= temp;
+//     }
+
+
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,0,3,4,0,5,6,0,7,0,0};
+//         int n = arr.length-1;
+//         for(int i = 0 ;i<=n;i++){
+//             if(arr[i]== 0){   
+//                 int temp = i;             
+//                 while (arr[i]==0 && temp<n) {
+//                     swap(arr,i,temp+1);
+//                     temp++;
+                    
+//                 }
+//             }
+
+//         }
+
+        
+//         System.out.println(Arrays.toString(arr));
+//     }
+// }
+
+
+
+// Union of two sorted arrays.
+
+// import java.util.ArrayList;
+
+// public class Practice1{
+
+//     public static void swap(int [] arr,int first,int second){
+//         int temp = arr[first];
+//         arr[first] = arr[second];
+//         arr[second]= temp;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr1 = {1,1,2,3,4,5,6,7,7,8,8,9};
+//         int[] arr2 = {2,3,4,4,5};
+//         int n1 = arr1.length;
+//         int n2 = arr2.length;
+//         int i = 0 ;
+//         int j = 0 ;
+//         ArrayList <Integer> list = new ArrayList<>();
+//         int temp = arr1[0]; 
+//         list.add(temp);
+//         while (i<n1 && j<n2) { 
+//             if(arr1[i] <= arr2[j]){
+//                 if(arr1[i]!=temp){
+//                     temp = arr1[i];
+//                     list.add(temp);
+                    
+//                 }
+//                 i++;
+//             }else{
+//                 if(arr2[j]!=temp){
+//                     temp = arr2[j];
+//                     list.add(temp);
+                   
+//                 }
+//                  j++;
+//             }
+//         }
+
+//         while (i<n1) {
+//             if(temp != arr1[i]){
+//                 temp = arr1[i];
+//                 list.add(temp);                
+//             }
+//             i++;
+//         }
+
+//         while (j<n2) {
+//             if(temp != arr2[j]){
+//                 temp = arr2[j];
+//                 list.add(temp);       
+//             }
+//             j++;
+//         }
+
+//         System.out.println(list);
+        
+
+//     }
+// }
+
+
+
 
 // Que 3.Insertion and deletion in array.
 
