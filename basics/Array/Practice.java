@@ -20,9 +20,8 @@
 //     }
 // }
 
-
 // Remove the duplicates inplace from the sorted array. 
- 
+
 // import java.util.Arrays;
 
 // public class Practice1 {
@@ -39,12 +38,9 @@
 //         }
 
 //         System.out.println(Arrays.toString(arr));
-        
+
 //     }
 // }
-
-
-
 
 // left rotate by D place 
 
@@ -67,15 +63,13 @@
 //         int dplace= 22;
 //         int d =  dplace%arr.length; 
 //         int n = arr.length-1;
-        
+
 //         reverse(arr,0,d-1);
 //         reverse(arr, d, n);
 //         reverse(arr, 0, n);
 //         System.out.println(Arrays.toString(arr));
 //     }
 // }
-
-
 
 // Optimal solution : Move zeroes to end of array.
 
@@ -106,10 +100,154 @@
 //                 j ++;
 //             }
 //         }
-        
+
 //         System.out.println(Arrays.toString(arr));
 //     }
 // }
+
+// Move zeroes of an array to its end. 
+// import java.util.Arrays;
+
+// public class Practice1{
+
+//     public static void swap(int [] arr,int first,int second){
+//         int temp = arr[first];
+//         arr[first] = arr[second];
+//         arr[second]= temp;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,0,3,4,0,5,6,0,7,0,0};
+//         int n = arr.length-1;
+//         for(int i = 0 ;i<=n;i++){
+//             if(arr[i]== 0){   
+//                 int temp = i;             
+//                 while (arr[i]==0 && temp<n) {
+//                     swap(arr,i,temp+1);
+//                     temp++;
+
+//                 }
+//             }
+
+//         }
+
+//         System.out.println(Arrays.toString(arr));
+//     }
+// }
+
+
+
+// Union of two sorted arrays.
+
+// import java.util.ArrayList;
+
+// public class Practice1{
+
+//     public static void swap(int [] arr,int first,int second){
+//         int temp = arr[first];
+//         arr[first] = arr[second];
+//         arr[second]= temp;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr1 = {1,1,2,3,4,5,6,7,7,8,8,9};
+//         int[] arr2 = {2,3,4,4,5};
+//         int n1 = arr1.length;
+//         int n2 = arr2.length;
+//         int i = 0 ;
+//         int j = 0 ;
+//         ArrayList <Integer> list = new ArrayList<>();
+//         int temp = arr1[0]; 
+//         list.add(temp);
+//         while (i<n1 && j<n2) { 
+//             if(arr1[i] <= arr2[j]){
+//                 if(arr1[i]!=temp){
+//                     temp = arr1[i];
+//                     list.add(temp);
+
+//                 }
+//                 i++;
+//             }else{
+//                 if(arr2[j]!=temp){
+//                     temp = arr2[j];
+//                     list.add(temp);
+
+//                 }
+//                  j++;
+//             }
+//         }
+
+//         while (i<n1) {
+//             if(temp != arr1[i]){
+//                 temp = arr1[i];
+//                 list.add(temp);                
+//             }
+//             i++;
+//         }
+
+//         while (j<n2) {
+//             if(temp != arr2[j]){
+//                 temp = arr2[j];
+//                 list.add(temp);       
+//             }
+//             j++;
+//         }
+
+//         System.out.println(list);
+
+//     }
+// }
+
+
+
+// Intersection of two sorted arrays.
+
+// import java.util.ArrayList;
+
+// public class Practice1{
+
+//     public static void swap(int [] arr,int first,int second){
+//         int temp = arr[first];
+//         arr[first] = arr[second];
+//         arr[second]= temp;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr1 = {1,1,2,3,4,5,6,7,7,8,8,9};
+//         int[] arr2 = {2,3,4,4,5,9};
+//         int n1 = arr1.length;
+//         int n2 = arr2.length;
+//         int i = 0 ;
+//         int j = 0 ;
+//         ArrayList <Integer> list = new ArrayList<>();
+//         int temp = arr1[0]; 
+//         list.add(temp);
+//         while (i<n1 && j<n2) { 
+//             if(arr1[i] == arr2[j]){
+//                 if(arr1[i]!=temp){
+//                     temp = arr1[i];
+//                     list.add(temp);
+                    
+//                 }
+//                 i++;
+//                 j++;
+//             }else if(arr1[i]<arr2[j]){    
+//                 i++;
+//             }else{
+//                 j++;
+//             }
+            
+//         }
+
+//         System.out.println(list);
+        
+
+//     }
+// }
+
+
+
+
 
 
 
@@ -138,6 +276,7 @@
 
 //   }
 // }
+
 
 
 
@@ -198,106 +337,6 @@
 //     }
 //   }
 
-
-// Move zeroes of an array to its end. 
-// import java.util.Arrays;
-
-// public class Practice1{
-
-//     public static void swap(int [] arr,int first,int second){
-//         int temp = arr[first];
-//         arr[first] = arr[second];
-//         arr[second]= temp;
-//     }
-
-
-//     public static void main(String[] args) {
-//         int[] arr = {1,2,0,3,4,0,5,6,0,7,0,0};
-//         int n = arr.length-1;
-//         for(int i = 0 ;i<=n;i++){
-//             if(arr[i]== 0){   
-//                 int temp = i;             
-//                 while (arr[i]==0 && temp<n) {
-//                     swap(arr,i,temp+1);
-//                     temp++;
-                    
-//                 }
-//             }
-
-//         }
-
-        
-//         System.out.println(Arrays.toString(arr));
-//     }
-// }
-
-
-
-// Union of two sorted arrays.
-
-// import java.util.ArrayList;
-
-// public class Practice1{
-
-//     public static void swap(int [] arr,int first,int second){
-//         int temp = arr[first];
-//         arr[first] = arr[second];
-//         arr[second]= temp;
-//     }
-
-//     public static void main(String[] args) {
-//         int[] arr1 = {1,1,2,3,4,5,6,7,7,8,8,9};
-//         int[] arr2 = {2,3,4,4,5};
-//         int n1 = arr1.length;
-//         int n2 = arr2.length;
-//         int i = 0 ;
-//         int j = 0 ;
-//         ArrayList <Integer> list = new ArrayList<>();
-//         int temp = arr1[0]; 
-//         list.add(temp);
-//         while (i<n1 && j<n2) { 
-//             if(arr1[i] <= arr2[j]){
-//                 if(arr1[i]!=temp){
-//                     temp = arr1[i];
-//                     list.add(temp);
-                    
-//                 }
-//                 i++;
-//             }else{
-//                 if(arr2[j]!=temp){
-//                     temp = arr2[j];
-//                     list.add(temp);
-                   
-//                 }
-//                  j++;
-//             }
-//         }
-
-//         while (i<n1) {
-//             if(temp != arr1[i]){
-//                 temp = arr1[i];
-//                 list.add(temp);                
-//             }
-//             i++;
-//         }
-
-//         while (j<n2) {
-//             if(temp != arr2[j]){
-//                 temp = arr2[j];
-//                 list.add(temp);       
-//             }
-//             j++;
-//         }
-
-//         System.out.println(list);
-        
-
-//     }
-// }
-
-
-
-
 // Que 3.Insertion and deletion in array.
 
 // import java.util.Arrays;
@@ -305,129 +344,129 @@
 
 // public class Practice {
 
-// public static void main(String[] args) {
-// // Declare and initialize an array
-// int[] numbers = { 10, 20, 30, 40, 50 };
-// Scanner in = new Scanner(System.in);
-// System.out.println("enter the element to be insert ");
-// int element = in.nextInt();
-// System.out.println("enter the index at which elment to be inserted");
-// int indexToInsert = in.nextInt();
+//   public static void main(String[] args) {
+//     // Declare and initialize an array
+//     int[] numbers = { 10, 20, 30, 40, 50 };
+//     Scanner in = new Scanner(System.in);
+//     System.out.println("enter the element to be insert ");
+//     int element = in.nextInt();
+//     System.out.println("enter the index at which elment to be inserted");
+//     int indexToInsert = in.nextInt();
 
-// insert(numbers, element, indexToInsert);
+//     insert(numbers, element, indexToInsert);
 
-// System.out.println("enter the element to be deleted");
-// int elementToDelete = in.nextInt();
-// delete(numbers, elementToDelete);
-// in.close();
+//     System.out.println("enter the element to be deleted");
+//     int elementToDelete = in.nextInt();
+//     delete(numbers, elementToDelete);
+//     in.close();
 
-// }
+//   }
 
-// Insert an element at a specific position (requires shifting)
+//Insert an element at a specific position (requires shifting)
 
 // public static void insert(int[] numbers, int element, int indexToInsert) {
 // int[] newArr = new int[numbers.length + 1];
 // for (int i = 0, j = 0; i < numbers.length; i++, j++) {
 // if (i == indexToInsert) {
-// newArr[j] = element;
-// j++;
-// } else if (indexToInsert >= numbers.length - 1)  // point to be noted
+//   newArr[j] = element;
+//   j++;
+// } else if (indexToInsert >= numbers.length - 1) // point to be noted
 // {
-// newArr[newArr.length - 1] = element;
+//   newArr[newArr.length - 1] = element;
 // }
-// newArr[j] = numbers[i];
+//   newArr[j] = numbers[i];
 
 // }
 // System.out.println(Arrays.toString(newArr));
 
 // }
 
-// other way
-// int[] arr = { 2, 6, 3, 1, 7, 8 };
-// int[] newArr = new int[arr.length + 1];
-// int element = 5;
-// int index = arr.length-1;
-// int j = 0;
-// for (int i = 0; i < arr.length; i++) {
+//other way
+//   int[] arr = { 2, 6, 3, 1, 7, 8 };
+//   int[] newArr = new int[arr.length + 1];
+//   int element = 5;
+//   int index = arr.length-1;
+//   int j = 0;
+//   for (int i = 0; i < arr.length; i++) {
 
-//     newArr[j] = arr[i];
-//     if (i == index) {
-//         int temp = arr[i];
-//         newArr[j] = element;
-//         j++;
-//         newArr[j] = temp;
+//   newArr[j] = arr[i];
+//   if (i == index) {
+//     int temp = arr[i];
+//     newArr[j] = element;
+//     j++;
+//     newArr[j] = temp;
 
 //     }
 //     j++;
+//   }
+
+//   System.out.println(Arrays.toString(newArr));
+
+//   // Delete an element at a specific position (requires shifting)
+//   public static void delete(int[] numbers, int elementToDelete) {
+
+//   for (int i = 0, j = 0; i < numbers.length - 1; i++, j++) {
+//     if (numbers[i] == elementToDelete) {
+//       j++;
+//       }
+//     else if (numbers[numbers.length - 1] == elementToDelete) // point to be noted
+//       {
+//       numbers[numbers.length-1]= 0;
+//       }
+//     numbers[i] = numbers[j];
+//   }
+
+//     System.out.println(Arrays.toString(numbers));
+
+//   }
 // }
 
-// System.out.println(Arrays.toString(newArr));
-
-// Delete an element at a specific position (requires shifting)
-// public static void delete(int[] numbers, int elementToDelete) {
-
-// for (int i = 0, j = 0; i < numbers.length - 1; i++, j++) {
-// if (numbers[i] == elementToDelete) {
-// j++;
-// }
-// else if (numbers[numbers.length - 1] == elementToDelete)  // point to be noted 
-//{
-// numbers[numbers.length-1]= 0;
-// }
-// numbers[i] = numbers[j];
-// }
-
-// System.out.println(Arrays.toString(numbers));
-
-// }
-// }
-
-// Bubble sort
+//Bubble sort
 // public class Practice {
 
-// public static void main(String[] args) {
-// int[] arr = { 2, 23, 43, 34, 1, 3, 42, 45 };
-// int temp;
-// for (int i = 0; i < arr.length; i++) {
-// for(int j = 0 ; j<arr.length-i-1;j++){
-// if(arr[j]>arr[j+1]){
-// temp = arr[j];
-// arr[j] = arr[j+1];
-// arr[j+1] = temp;
+//   public static void main(String[] args) {
+//     int[] arr = { 2, 23, 43, 34, 1, 3, 42, 45 };
+//     int temp;
+//     for (int i = 0; i < arr.length; i++) {
+//       for (int j = 0; j < arr.length - i - 1; j++) {
+//         if (arr[j] > arr[j + 1]) {
+//           temp = arr[j];
+//           arr[j] = arr[j + 1];
+//           arr[j + 1] = temp;
 
-// }
-// }
-// }
+//         }
+//       }
+//     }
 
-// for(int i: arr){
-// System.out.print(i+ " ");
-// }
-// }
+//     for (int i : arr) {
+//       System.out.print(i + " ");
+//     }
+//   }
 // }
 
 // Selection Sort
 // public class Practice {
 
-// public static void main(String[] args) {
-// int[] arr = {23,564,656,22,33,43,344};
-// int minIndex;
-// int temp;
-// for(int i =0; i < arr.length;i++){
-// minIndex = i;
-// for(int j = i+1; j<arr.length;j++){
-// if(arr[minIndex] > arr[j]){
-// minIndex = j;
-// }
+//   public static void main(String[] args) {
+//     int[] arr = { 23, 564, 656, 22, 33, 43, 344 };
+//     int minIndex;
+//     int temp;
+//     for (int i = 0; i < arr.length; i++) {
+//       minIndex = i;
+//       for (int j = i + 1; j < arr.length; j++) {
+//         if (arr[minIndex] > arr[j]) {
+//           minIndex = j;
+//         }
 
-// }
-// temp = arr[minIndex];
-// arr[minIndex] = arr[i];
-// arr[i] = temp;
-// }
-// for(int k : arr){
-// System.out.println(k);
-// }
-// }
+//       }
+//       temp = arr[minIndex];
+//       arr[minIndex] = arr[i];
+//       arr[i] = temp;
+//     }
+//     for (int k : arr) {
+//       System.out.println(k);
+//     }
+//   }
 // }
 
 // Linear Search in 2d array
@@ -497,6 +536,8 @@
 // return number;
 // }
 // }
+
+
 
 // Q. Given an m * n integer grid accounts where accounts[i][j] is the amount of
 // money the ith customers has in the jth accounts . Return the wealth the
@@ -639,15 +680,16 @@
 // }
 
 // }
-// here we use remainder because after this operations index value of resultant element remains preserved in every case.
-// return arr[start%arr.length];   //point to be remember
+// here we use remainder because after this operations index value of resultant
+// element remains preserved in every case.
+// return arr[start%arr.length]; //point to be remember
 // }
 
 // }
 
-// Q . find the first index and last index of target element in a sorted  array.
+// Q . find the first index and last index of target element in a sorted array.
 // This is totally logical so remember this logic.
-// import java.util.*;  
+// import java.util.*;
 
 // public class Practice {
 // public static void main(String[] args) {
@@ -716,8 +758,9 @@
 // int left = 0 ;
 // int right = 1;
 
-// //point to be remember 
-// This method does not work when the element is greater than last element.In case we need to throw an indexoutofBound Exception .
+// //point to be remember
+// This method does not work when the element is greater than last element.In
+// case we need to throw an indexoutofBound Exception .
 // while(target>arr[right]){
 // int temp = right + 1;
 // right = right + (right -left + 1)*2;
@@ -756,7 +799,7 @@
  * array if numbers increase up till one point, then decreases till the end.
  */
 
-//Q . find the peak of the mountain array.
+// Q . find the peak of the mountain array.
 
 // public class Practice{
 // public static void main(String[] args){
@@ -767,7 +810,7 @@
 // static int peakValue(int[] arr){
 // int start = 0;
 // int end = arr.length -1 ;
-// while(start < end)    // points to be remember 
+// while(start < end) // points to be remember
 // {
 // int mid = start + (end - start)/2;
 
@@ -796,8 +839,8 @@
 // static int findValue(int[] arr, int target) {
 // int start = 0;
 // int end = arr.length - 1;
-// while (start < end)    // point to be remember
-//{
+// while (start < end) // point to be remember
+// {
 // int mid = start + (end - start) / 2;
 
 // if (arr[mid] > arr[mid + 1]) {
@@ -830,36 +873,50 @@
 // }
 
 // full logical question...
-// Rotated array : A rotated array is a sorted array that has been shifted or rotated by a certain number of positions to the right. In other words, the elements of the original sorted array have been rearranged by moving the last few elements to the beginning of the array.
+// Rotated array : A rotated array is a sorted array that has been shifted or
+// rotated by a certain number of positions to the right. In other words, the
+// elements of the original sorted array have been rearranged by moving the last
+// few elements to the beginning of the array.
 
-// For example, consider the sorted array [1, 2, 3, 4, 5]. If we rotate it by 2 positions to the right, the resulting array becomes [4, 5, 1, 2, 3]. The original sorted order is preserved, but the elements have been shifted to create a new sequence.
+// For example, consider the sorted array [1, 2, 3, 4, 5]. If we rotate it by 2
+// positions to the right, the resulting array becomes [4, 5, 1, 2, 3]. The
+// original sorted order is preserved, but the elements have been shifted to
+// create a new sequence.
 
 // Q. search in an sorted rotated array :
 
 // Steps for the First way when there is no duplicate elements in the array :
-// step 1 :  find the pivot(It is element of the array from where next elements are ascending or we can say it is the largest element of the array.)
-// ex : arr = [4, 5, 1, 2, 3] in this example 5 is the pivot. 
+// step 1 : find the pivot(It is element of the array from where next elements
+// are ascending or we can say it is the largest element of the array.)
+// ex : arr = [4, 5, 1, 2, 3] in this example 5 is the pivot.
 
 // There are three cases to find the pivot.
-// case 1 : If the mid element is greater than (mid + 1) element then mid element is the pivot.
-//  [3,4,5,6,7,0,1,2,3] in this example if mid is 7. 
+// case 1 : If the mid element is greater than (mid + 1) element then mid
+// element is the pivot.
+// [3,4,5,6,7,0,1,2,3] in this example if mid is 7.
 
-// case 2 :  in the prev example, if mid is 0 or we can say if mid element is less than (mid -1) then (mid - 1) is the pivot .
+// case 2 : in the prev example, if mid is 0 or we can say if mid element is
+// less than (mid -1) then (mid - 1) is the pivot .
 
-// case 3 : in the prev example , if the start element is greater or equal to the mid element we can say all the elements after the mid element will be smaller than start element so we don't need to check it hence end = mid.
+// case 3 : in the prev example , if the start element is greater or equal to
+// the mid element we can say all the elements after the mid element will be
+// smaller than start element so we don't need to check it hence end = mid.
 
-// case 4 : if the start element is less than mid element then pivot will lie after the mid element so start = mid +1 .
+// case 4 : if the start element is less than mid element then pivot will lie
+// after the mid element so start = mid +1 .
 
-// step 2 : Apply the binary search in the first half and then in the second half .
+// step 2 : Apply the binary search in the first half and then in the second
+// half .
 
 // public class Practice {
-//   public static void main(String[] args) {
-//     int[] arr = { 1, 2, 3, 3, 5, 0, 1, 2 };
-//     int target = 5;
-//     System.out.println(Search(arr, target));
-//     System.out.println("Rotation count will be "+(findPivotwithduplicates(arr)+1));
+// public static void main(String[] args) {
+// int[] arr = { 1, 2, 3, 3, 5, 0, 1, 2 };
+// int target = 5;
+// System.out.println(Search(arr, target));
+// System.out.println("Rotation count will be
+// "+(findPivotwithduplicates(arr)+1));
 
-//   }
+// }
 
 // This will not work for the rotated sorted array containing no duplicate
 // values.
@@ -884,81 +941,83 @@
 // }
 
 // this works for the duplicates value in the rotated array..
-//   public static int findPivotwithduplicates(int[] arr) {
-//     int left = 0;
-//     int right = arr.length - 1;
+// public static int findPivotwithduplicates(int[] arr) {
+// int left = 0;
+// int right = arr.length - 1;
 
-//     while (left <= right) {
+// while (left <= right) {
 
-//       int mid = left + (right - left) / 2;
-//       if (mid < right && arr[mid] > arr[mid + 1]) {
-//         return mid;
-//       } else if (mid > left && arr[mid] < arr[mid - 1]) {
-//         return mid - 1;
-//       } else if (arr[left] == arr[mid] && arr[right] == arr[mid]) {
+// int mid = left + (right - left) / 2;
+// if (mid < right && arr[mid] > arr[mid + 1]) {
+// return mid;
+// } else if (mid > left && arr[mid] < arr[mid - 1]) {
+// return mid - 1;
+// } else if (arr[left] == arr[mid] && arr[right] == arr[mid]) {
 
-//         // check if first or last is pivot or not
-//         if (arr[left] > arr[left + 1]) {
-//           return left;
-//         }
-//         left--;
-//         if (arr[right] < arr[right - 1]) {
-//           return right;
-//         }
-//         right--;
+// // check if first or last is pivot or not
+// if (arr[left] > arr[left + 1]) {
+// return left;
+// }
+// left--;
+// if (arr[right] < arr[right - 1]) {
+// return right;
+// }
+// right--;
 
-//       } else if (arr[left] < arr[mid] || (arr[left] == arr[mid] && arr[mid] > arr[right])) {
-//         left = mid + 1;
-//       } else {
-//         right = mid - 1;
-//       }
+// } else if (arr[left] < arr[mid] || (arr[left] == arr[mid] && arr[mid] >
+// arr[right])) {
+// left = mid + 1;
+// } else {
+// right = mid - 1;
+// }
 
-//     }
-//     return -1;
-//   }
+// }
+// return -1;
+// }
 
-//   public static int Search(int[] arr, int target) {
-//     int left = 0;
+// public static int Search(int[] arr, int target) {
+// int left = 0;
 
-//     int pivot = findPivotwithduplicates(arr);
-//     int result = -1;
-//     if (pivot == -1) {
-//       result = findValue(arr, 0, arr.length - 1, target);
-//     } else if (arr[pivot] == target) {
-//       return pivot;
-//     } else if (target > arr[left]) {
-//       result = findValue(arr, left, pivot, target);
-//     } else if (target < arr[left]) {
+// int pivot = findPivotwithduplicates(arr);
+// int result = -1;
+// if (pivot == -1) {
+// result = findValue(arr, 0, arr.length - 1, target);
+// } else if (arr[pivot] == target) {
+// return pivot;
+// } else if (target > arr[left]) {
+// result = findValue(arr, left, pivot, target);
+// } else if (target < arr[left]) {
 
-//       result = findValue(arr, pivot + 1, arr.length - 1, target);
-//     }
-//     return result;
-
-//   }
-
-//   public static int findValue(int[] arr, int start, int end, int target) {
-
-//     while (start <= end) {
-//       int mid = start + (end - start) / 2;
-
-//       if (arr[mid] == target) {
-//         return mid;
-//       } else if (arr[mid] < target) {
-//         start = mid + 1;
-//       } else {
-//         end = mid - 1;
-
-//       }
-
-//     }
-//     return -1;
-
-//   }
+// result = findValue(arr, pivot + 1, arr.length - 1, target);
+// }
+// return result;
 
 // }
 
-// Q. Given an array arr which consists of non-negative integers and an integers m, you can split the array into m non -empty continuous subarrays.
-// hint : we need to find the smallest of largest sum in the subarray.  
+// public static int findValue(int[] arr, int start, int end, int target) {
+
+// while (start <= end) {
+// int mid = start + (end - start) / 2;
+
+// if (arr[mid] == target) {
+// return mid;
+// } else if (arr[mid] < target) {
+// start = mid + 1;
+// } else {
+// end = mid - 1;
+
+// }
+
+// }
+// return -1;
+
+// }
+
+// }
+
+// Q. Given an array arr which consists of non-negative integers and an integers
+// m, you can split the array into m non-empty continuous subarrays.
+// hint : we need to find the smallest of largest sum in the subarray.
 
 public class Practice {
   public static void main(String[] args) {
