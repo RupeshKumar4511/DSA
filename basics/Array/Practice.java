@@ -246,7 +246,95 @@
 // }
 
 
+// find the largest subarry with sum k
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//         int i = 0;
+//         int j = 0;
+//         int sum = 0;
+//         int len = 0;
+//         int k = 15;
+//         while (j < arr.length) {
+//             while (i <= j && sum > k) {
+//                 sum -= arr[i];
+//                 i++;
+//             }
+//             if (j < arr.length) {
+//                 sum += arr[j];
+//             }
+//             if (sum == k) {
+//                 len = Math.max(len, j - i - 1);
+//             }
+//             j++;
+//         }
+//         System.out.println(len);
 
+//     }
+// }
+
+
+
+
+// find the number appearing once
+// public class Practice{
+
+//     public static void main(String[] args) {
+//         int[] arr = {1,1,2,3,3,4,4};
+//         int xor = 0;
+//         for(int i = 0 ;i<arr.length;i++){
+//             xor = xor^ arr[i];
+//         }
+//         System.out.println(xor);
+//     }
+// }
+
+
+
+
+
+// If sum of any two element is equal to target then return "YES"
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = {2,6,5,8,11};
+//         int left = 0;
+//         int k=14;
+//         int right = arr.length-1;
+//         while (left<right) {
+//             int sum = arr[left]+ arr[right];
+//             if(sum == k){
+//                 System.out.println("YES");
+//                 break;
+//             }else if(sum <k){
+//                 left++;
+//             }else{
+//                 right--;
+//             }
+//         }   
+//     }
+// }
+
+
+
+// If sum of any two element is equal to target then return their index.
+// import java.util.HashMap;
+
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = {2,6,5,8,11};
+//         int target = 14;
+//         HashMap<Integer,Integer> hash = new HashMap<>();
+//         for(int i = 0 ;i<arr.length;i++){
+//             int more = target - arr[i];
+//             if(!hash.containsKey(more)){
+//                 hash.put(arr[i],i);
+//             }else{
+//                 System.out.println(i+","+ hash.get(more));
+//                 break;
+//             }
+//         }
+//     }
+// }
 
 
 
