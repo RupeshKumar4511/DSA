@@ -294,12 +294,14 @@
 
 
 // If sum of any two element is equal to target then return "YES"
+// import java.util.Arrays;
 // public class Practice1 {
 //     public static void main(String[] args) {
 //         int[] arr = {2,6,5,8,11};
 //         int left = 0;
 //         int k=14;
 //         int right = arr.length-1;
+//         Arrays.sort(arr);
 //         while (left<right) {
 //             int sum = arr[left]+ arr[right];
 //             if(sum == k){
@@ -338,6 +340,89 @@
 
 
 
+
+
+// Majority Elements : 
+
+// Using Moore's voting Algorithm :
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = { 2, 3, 4, 4, 1, 2, 3 };
+//         // apply Moore's voting algo
+//         int element = 0;
+//         int count = 0;
+//         int majorityElement = arr[0];
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] == arr[element]) {
+//                 count++;
+//             } else {
+//                 if(count>=1){
+//                     count--;
+//                 }else{
+//                     count = 0;
+//                     element++;
+
+//                 }
+                
+//             }
+
+//         }
+
+//         if(count>=1){
+//             majorityElement = arr[element];
+//         }
+
+//         int majorityCount = 0 ;
+//         // verify the element is majority or not. 
+//         for(int j  = 0 ;j<arr.length;j++){
+//             if(arr[j]== majorityElement){
+//                 majorityCount++;
+//             }
+//         }
+
+//         if(majorityCount>(arr.length/2)){
+//             System.out.println(majorityElement);
+//         }else{
+//             System.out.println(-1);
+//         }
+
+//     }
+// }
+
+
+
+
+// sort 0's 1's and 2's of an array.
+
+// using Dutch National Flag Algorithm
+// import java.util.Arrays;
+// public class Practice1 {
+
+//     public static void swap(int[] arr,int first,int second){
+//         int temp = arr[first]; 
+//         arr[first] = arr[second];
+//         arr[second] = temp;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,0,1,1,1,0,1,2,1,2};
+//         int low = 0;
+//         int mid = 0 ;
+//         int high = arr.length-1;
+//         for(int i = 0 ; i<arr.length;i++){
+//             if(arr[mid]== 0 ){
+//                 swap(arr,low,mid);
+//                 low++; 
+//                 mid++;
+//             }else if(arr[mid]==1){
+//                 mid++;
+//             }else if(arr[mid]==2){
+//                 swap(arr,mid,high);
+//                 high--;
+//             }
+//         }
+//         System.out.println(Arrays.toString(arr));
+//     }
+// }
 
 
 
