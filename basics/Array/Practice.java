@@ -427,6 +427,41 @@
 
 
 
+// maximum subarray sum and give start and end index
+
+// Using Kadane's algorithm
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = {-2,-3,4,-1,-2,1,5,-3};
+//         int maximum = Integer.MIN_VALUE;
+//         int sum = 0 ;
+//         int ansStart = -1 ;
+//         int ansEnd = -1;
+//         int MaxSubArrayStartIndex = -1 ;
+//         for(int i = 0 ;i<arr.length;i++){
+//             if(sum == 0){
+//                 MaxSubArrayStartIndex = i;
+//             }
+//             sum += arr[i];
+            
+//             if(sum<0){
+//                 sum=0;
+//             }
+//             if(sum>maximum){
+//                 maximum = Math.max(maximum, sum);
+//                 ansStart = MaxSubArrayStartIndex;
+//                 ansEnd = i;
+
+//             }
+//         }
+//         System.out.println(maximum);
+//         System.out.println(ansStart);
+//         System.out.println(ansEnd);
+       
+//     }
+// }
+
+
 // concating two array. 
 
 // import java.util.Arrays;
