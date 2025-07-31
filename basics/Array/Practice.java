@@ -462,6 +462,69 @@
 // }
 
 
+// Rearrange the arrays by sign it equal no of positive and negative elements 
+// import java.util.Arrays;
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = {3,1,-2,-5,2,-4};
+//         for this array ans will be {3,-2,1,-5,2,-4} means one pos and then one neg
+//         Hint : pos are placed at even indexes and neg are on odd index.
+//         int positivesIndex = 0 ;
+//         int negativesIndex = 1 ;
+//         int[] newArr = new int[arr.length];
+//         for(int i = 0 ;i<arr.length;i++){
+//             if(arr[i]> 0){
+//                 newArr[positivesIndex]=arr[i];
+//                 positivesIndex += 2;
+//             }else{
+//                 newArr[negativesIndex]= arr[i];
+//                 negativesIndex += 2;
+//             }
+//         }
+//         System.out.println(Arrays.toString(newArr));
+//     }
+// }
+
+
+
+// Rearrange the arrays by sign it unequal no of positive and negative elements 
+// import java.util.ArrayList;
+// import java.util.Arrays;
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = {-1,2,3,4,-3,1};
+//         ArrayList <Integer> pos = new ArrayList<>();
+//         ArrayList <Integer> neg = new ArrayList<>();
+
+//         for(int i = 0 ;i <arr.length;i++){
+//             if(arr[i]>0){
+//                 pos.add(arr[i]);
+//             }else{
+//                 neg.add(arr[i]);
+//             }
+//         }
+
+//         int MIN = Math.min(pos.size(),neg.size());
+//         for(int j = 0 ;j<MIN;j++){
+//             arr[j*2]= pos.get(j);
+//             arr[(j*2)+1]= neg.get(j);
+//         }
+
+//         for(int k = MIN;k<pos.size();k++){
+//             arr[k+MIN] = pos.get(k);
+//         }
+//          for(int k = MIN;k<neg.size();k++){
+//             arr[k+MIN] = neg.get(k);
+//         }
+
+//         System.out.println(Arrays.toString(arr));
+//     }
+// }
+
+
+
+
+
 // concating two array. 
 
 // import java.util.Arrays;
