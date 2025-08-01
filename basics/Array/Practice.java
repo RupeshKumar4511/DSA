@@ -522,8 +522,40 @@
 // }
 
 
+// When to buy stock and sell stock 
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = {7,1,5,3,6,4};
+//         int maxIndex = 1;
+//         int minIndex = 0 ;
+//         for(int i = 1; i<arr.length;i++){
+//             if(arr[i]>arr[maxIndex]){
+//                 maxIndex= i;
+//             }
+//             if(arr[i-1]<arr[minIndex]&&(i-1)<maxIndex){
+//                 minIndex = i-1;
+//             }
+//         }
+//         System.out.println(minIndex+" "+ maxIndex);
+        
+//     }
+// }
 
+// maximize the profit When we buy stock and sell stock.
+// public class Practice1 {
+//     public static void main(String[] args) {
+//         int[] arr = {7,1,5,3,6,4};
+//         int min = arr[0];
+//         int profit = 0 ;
+//         for(int i = 1 ;i<arr.length;i++){
+//             int cost = arr[i]-min;
+//             profit = Math.max(profit, cost);
+//             min = Math.min(min, arr[i]);
 
+//         }
+//         System.out.println(profit);
+//     }
+// }
 
 // concating two array. 
 
