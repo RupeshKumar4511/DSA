@@ -49,7 +49,8 @@ public class QuickSort {
                 end--;
                 
             }
-            // this is why because if any one part is already sorted then no swap will happen . 
+            // this is why because if (start>end) it means no violation occurs so we
+            // don't need to swap. 
             if(start<= end ){
                 int temp = arr[start];
                 arr[start]= arr[end];
