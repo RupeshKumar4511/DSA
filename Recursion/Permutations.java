@@ -7,6 +7,7 @@ package Recursion;
 
 //     public static void permutation(int[] arr, ArrayList<Integer>ds,boolean[] freq){
 //         if(ds.size()==arr.length){
+//            // we can store this ds into another list data structure
 //             System.out.println(ds);
 //             return;
 //         }
@@ -48,6 +49,7 @@ public class Permutations {
     }
     public static void permutation(int index,int[] arr){
         if(index>= arr.length){
+            // We can store this result in another list data structure
             System.out.println(Arrays.toString(arr));
             return;
         }
