@@ -56,6 +56,9 @@ package Recursion;
 //         }
 
 //         for (int i = index; i < arr.length; i++) {
+            // Here (i>index) because first index will always be taken whether it is repeated or not 
+            // while picking next element.
+            // Here ( arr[i] == arr[i - 1]) because duplicate gives the same combination. 
 //             if (i > index && arr[i] == arr[i - 1])
 //                 continue;
 //             // case of not pick the element
