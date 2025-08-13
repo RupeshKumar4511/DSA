@@ -1,4 +1,3 @@
-package SortingAlgorithms;
 /*
  * When the values are given from range (1 to N ) then apply Cyclic Sort.
  * 

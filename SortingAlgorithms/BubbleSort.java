@@ -1,5 +1,3 @@
-package SortingAlgorithms;
-
 /*
  * BubbleSort Algorithm : It is a comparison based algorithm. 
  * In BubbleSort Algorithm ,firstly we take two value from starting and then check if the first value is smaller or greater than second ,

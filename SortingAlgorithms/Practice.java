@@ -1,6 +1,3 @@
-package SortingAlgorithms;
-
-
 // Que 1. Find the missing no when nos are given from [0,n].
 
 

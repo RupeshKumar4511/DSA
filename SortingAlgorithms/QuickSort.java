@@ -1,5 +1,3 @@
-package SortingAlgorithms;
-
 import java.util.Arrays;
 
 /* 

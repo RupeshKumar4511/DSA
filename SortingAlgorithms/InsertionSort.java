@@ -1,5 +1,3 @@
-package SortingAlgorithms;
-
 /*Insertion Sort : This algorithm states that sort the array in parts. 
 In this sorting algorithm, firstly we take two values from the array and sort it by comparing the last value is smaller or not than previous one and if is smaller then swap them and if not then break the inner loop . And this process continues for (N-2) times. For moving to next value we use "j" variable. 
 Total no of iteration for outer loop : (N-2) where N = length of array. 

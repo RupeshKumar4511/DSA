@@ -1,5 +1,3 @@
-package SortingAlgorithms;
-
 /* SelectionSort Algorithm : This algorithm states that select the element and place it at the right index. 
  we firstly assume first element of array as smallest and then compare the 
 first element with all other elemnt of array . If any other element is smaller than first element 

@@ -1,5 +1,3 @@
-package SortingAlgorithms;
-
 /*
 # Merge sort algorithm is used in inbuilt sort method for object in python.
 
