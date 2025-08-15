@@ -15,9 +15,13 @@ private static int largest(int[] arr){
         int[] output = new int[n];
         int[] count = new int[10];
         
+        // sort the digits
         for(int i = 0 ;i<n;i++){
             count[(arr[i]/exp)%10]++;
         }
+
+        // These two loops are used to show the change the original array 
+        // according to sorted by digits
         for(int j = 1 ;j <10;j++){
             count[j] = count[j]+ count[j-1];
         }
