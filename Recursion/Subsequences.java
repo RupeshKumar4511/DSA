@@ -37,7 +37,7 @@ package Recursion;
 //             return;
 //         }
 //         list.add(arr[index]);
-//         printAllSubsequence(index+1, arr, list,sum+arr[index],k);
+//         printAllSubsequence(index+1, arr, list,sum+=arr[index],k);
 //         list.remove(list.size()-1);
 //         sum -= arr[index];
 //         printAllSubsequence(index+1, arr, list,sum+=arr[index],k);
@@ -71,7 +71,7 @@ package Recursion;
 //             return false;
 //         }
 //         list.add(arr[index]);
-//         if(printAllSubsequence(index+1, arr, list,sum+arr[index],k)==true)return true;
+//         if(printAllSubsequence(index+1, arr, list,sum+=arr[index],k)==true)return true;
 //         list.remove(list.size()-1);
 //         sum -= arr[index];
 //         if(printAllSubsequence(index+1, arr, list,sum+=arr[index],k)==true)return true;
