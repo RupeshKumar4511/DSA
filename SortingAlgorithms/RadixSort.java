@@ -17,16 +17,24 @@ private static int largest(int[] arr){
         
         // sort the digits
         for(int i = 0 ;i<n;i++){
-            count[(arr[i]/exp)%10]++;
+            count[(arr[i]/exp)%10]++; // increment the frequency of that digit in the count array.
         }
 
-        // These two loops are used to show the change the original array 
+        // These two loops are used to show the change in the original array 
         // according to sorted by digits
+
+
         for(int j = 1 ;j <10;j++){
+            // Converts count into a prefix sum array.
+            // Each index now stores the position of the last occurrence of that digit in the sorted output.
             count[j] = count[j]+ count[j-1];
         }
         System.out.println("Updated count Array for "+exp+ "="+Arrays.toString(count));
 
+        // Build output array
+        // Process elements from right to left to maintain stability (important for Radix Sort).
+        // Places each element in its correct position inside output.
+        // Decrements count so the next same-digit element is placed correctly.
         for(int k = n-1 ;k>=0;k--){
             output[count[(arr[k]/exp)%10]-1]= arr[k];
             count[(arr[k]/exp)%10]--;
