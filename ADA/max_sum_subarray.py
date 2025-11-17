@@ -10,12 +10,10 @@ def max_sum_subarray(arr, k):
     for j in range(len(arr)):
         sum += arr[j]
 
-        # shrink window
         while sum > k:
             sum -= arr[i]
             i += 1
 
-        # check match
         if sum == k:
             if j - i + 1 > maxlen:
                 maxlen = j - i + 1
