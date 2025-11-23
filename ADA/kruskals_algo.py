@@ -37,10 +37,8 @@ class DisjointSet:
 def kruskals_algo(vertices, edges):
     # Step 1: sort edges using your bubble sort
     sort_edges(edges)
-
     ds = DisjointSet(vertices)
     mst = []
-
     for u, v, w in edges:
         # If adding the edge does not create a cycle
         if ds.union(u, v):
@@ -49,16 +47,11 @@ def kruskals_algo(vertices, edges):
         # Stop when MST has (V-1) edges
         if len(mst) == vertices - 1:
             break
-
     return mst
-
-
 
 edges = [[0, 1, 10], [1, 3, 15], [2, 3, 4], [2, 0, 6], [0, 3, 5]]
 vertices = 4
-
 mst = kruskals_algo(vertices, edges)
-
 print("MST edges:")
 for row in mst:
     print(row)
