@@ -36,7 +36,7 @@ class Heap:
 
         if self.heap:
             self.heap[0] = last
-            self.downheap(0)
+            self.downheap(i=0)
 
         return root
 
@@ -45,14 +45,16 @@ class Heap:
         l = self.left(i)
         r = self.right(i)
 
+        # Here we check (l < len(self.heap)) because it can out of index 
+        # due to formula used : (l = 2*i + 1)
         if l < len(self.heap) and self.heap[l] < self.heap[min]:
             min = l
         if r < len(self.heap) and self.heap[r] < self.heap[min]:
             min = r
 
         if min != i:
-            self.swap(i, min)
-            self.downheap(min)
+            self.swap(i, j=min)
+            self.downheap(min) 
 
     def heap_sort(self):
         result = []
