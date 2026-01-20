@@ -499,7 +499,7 @@ public class QueueExample {
 1. when we want to store the answer so far.
 2. when we have a group of elements inside a particular data structure for a period of time.
 3. Used In Trees.
-4. Used in VFX.
+4. Used in BFS.
 5. When we convert recursion program to iteration then we also use stack and queues.
 
 

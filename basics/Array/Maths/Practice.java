@@ -191,9 +191,6 @@
 //                 if(num%i==0){
 //                         isPrime = false;
 //                         break;
-//                     }else{
-//                         isPrime = true;
-
 //                     }
 
 //                 }

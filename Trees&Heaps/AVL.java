@@ -82,7 +82,7 @@ public class AVL {
 
     private Node leftRotate(Node c) {
         Node p = c.right;
-        Node t = p.right;
+        Node t = p.left;
 
         c.right = t;
         p.left = c;

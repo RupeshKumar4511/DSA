@@ -6,7 +6,7 @@
 //         int[] arr  = {2,32,13,434,563,563,34};
 //         int secondLargets = Integer.MIN_VALUE;
 //         int firstLargest = arr[0];
-//         for(int i = 0 ;i <arr.length-1;i++){
+//         for(int i = 1 ;i <arr.length;i++){
 //             if(arr[i]>firstLargest){
 //                 secondLargets = firstLargest;
 //                 firstLargest= arr[i];
@@ -30,7 +30,7 @@
 //         int[] arr  = {1,1,2,2,2,4,4};
 
 //         int i = 0 ;
-//         for(int j = 1; j<arr.length-1;j++){
+//         for(int j = 1; j<arr.length;j++){
 //             if(arr[j] != arr[i]){
 //                 i++;
 //                 arr[i] = arr[j];
@@ -72,6 +72,30 @@
 // }
 
 // Optimal solution : Move zeroes to end of array.
+
+// import java.util.Arrays;
+
+// class Test{
+  
+//   public static void moveZeroesToEnd(int[] arr){
+//     int pos = 0 ; // ptr which is used to rearrange nonzero element
+//     for(int i = 0 ;i<arr.length;i++){
+//       if(arr[i]!=0){
+//         arr[pos++] = arr[i];
+//       }
+//     }
+//     for(int j= pos ; j<arr.length;j++){
+//       arr[j]=0;
+//     }
+    
+//   }
+//   public static void main(String[] args){
+//     int[] arr = {1,2,0,3,4,0,5,6,0,7,0,0};
+//     moveZeroesToEnd(arr);
+//     System.out.println(Arrays.toString(arr));
+    
+//   }
+// }
 
 // import java.util.Arrays;
 
@@ -135,8 +159,6 @@
 //     }
 // }
 
-
-
 // Union of two sorted arrays.
 
 // import java.util.ArrayList;
@@ -198,8 +220,6 @@
 //     }
 // }
 
-
-
 // Intersection of two sorted arrays.
 
 // import java.util.ArrayList;
@@ -227,7 +247,7 @@
 //                 if(arr1[i]!=temp){
 //                     temp = arr1[i];
 //                     list.add(temp);
-                    
+
 //                 }
 //                 i++;
 //                 j++;
@@ -236,15 +256,13 @@
 //             }else{
 //                 j++;
 //             }
-            
+
 //         }
 
 //         System.out.println(list);
-        
 
 //     }
 // }
-
 
 // find the largest subarry with sum k
 // public class Practice1 {
@@ -273,9 +291,6 @@
 //     }
 // }
 
-
-
-
 // find the number appearing once
 // public class Practice{
 
@@ -288,10 +303,6 @@
 //         System.out.println(xor);
 //     }
 // }
-
-
-
-
 
 // If sum of any two element is equal to target then return "YES"
 // import java.util.Arrays;
@@ -316,8 +327,6 @@
 //     }
 // }
 
-
-
 // If sum of any two element is equal to target then return their index.
 // import java.util.HashMap;
 
@@ -337,10 +346,6 @@
 //         }
 //     }
 // }
-
-
-
-
 
 // Majority Elements : 
 
@@ -363,7 +368,7 @@
 //                     element++;
 
 //                 }
-                
+
 //             }
 
 //         }
@@ -388,9 +393,6 @@
 
 //     }
 // }
-
-
-
 
 // sort 0's 1's and 2's of an array.
 
@@ -424,9 +426,6 @@
 //     }
 // }
 
-
-
-
 // maximum subarray sum and give start and end index
 
 // Using Kadane's algorithm
@@ -443,7 +442,7 @@
 //                 MaxSubArrayStartIndex = i;
 //             }
 //             sum += arr[i];
-            
+
 //             if(sum<0){
 //                 sum=0;
 //             }
@@ -457,10 +456,9 @@
 //         System.out.println(maximum);
 //         System.out.println(ansStart);
 //         System.out.println(ansEnd);
-       
+
 //     }
 // }
-
 
 // Rearrange the arrays by sign it equal no of positive and negative elements 
 // import java.util.Arrays;
@@ -484,8 +482,6 @@
 //         System.out.println(Arrays.toString(newArr));
 //     }
 // }
-
-
 
 // Rearrange the arrays by sign it unequal no of positive and negative elements 
 // import java.util.ArrayList;
@@ -521,7 +517,6 @@
 //     }
 // }
 
-
 // When to buy stock and sell stock 
 // public class Practice1 {
 //     public static void main(String[] args) {
@@ -537,7 +532,7 @@
 //             }
 //         }
 //         System.out.println(minIndex+" "+ maxIndex);
-        
+
 //     }
 // }
 
@@ -556,14 +551,6 @@
 //         System.out.println(profit);
 //     }
 // }
-
-
-
-
-
-
-
-
 
 // concating two array. 
 
@@ -587,9 +574,6 @@
 
 //   }
 // }
-
-
-
 
 // Que 1. Given an array A as integer we need to find the leaders in the array. A
 //  elements is said to be leader if it is greater than or equal to its all
@@ -847,8 +831,6 @@
 // return number;
 // }
 // }
-
-
 
 // Q. Given an m * n integer grid accounts where accounts[i][j] is the amount of
 // money the ith customers has in the jth accounts . Return the wealth the
