@@ -98,7 +98,7 @@
 // }
 
 // import java.util.Arrays;
-
+//  Move zeroes to end of array.
 // public class Practice1{
 
 //     public static void swap(int [] arr,int first,int second){
@@ -158,6 +158,30 @@
 //         System.out.println(Arrays.toString(arr));
 //     }
 // }
+
+// Find Missing No : 
+//  class Test {
+
+//     public static int findMissingNo(int[] arr, int N) {
+//         int expectedSum = N * (N + 1) / 2;
+//         int actualSum = 0;
+
+//         for (int num : arr) {
+//             actualSum += num;
+//         }
+
+//         return expectedSum - actualSum;
+//     }
+
+//     public static void main(String[] args) {
+//         int N = 5;
+//         int[] arr = {1, 2, 4, 5};
+
+//         System.out.println(findMissingNo(arr, N)); 
+//     }
+// }
+
+
 
 // Union of two sorted arrays.
 
@@ -219,6 +243,32 @@
 
 //     }
 // }
+
+
+// MaximumConsecutiveOne
+// class Test {
+
+//     public static int maximumConsecutiveOne(int[] arr) {
+//         int count = 0;
+//         int max = 0;
+
+//         for (int num : arr) {
+//             if (num == 1) {
+//                 count++;
+//                 max = Math.max(max, count);
+//             } else {
+//                 count = 0;
+//             }
+//         }
+//         return max;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {1, 1, 0, 0, 1, 1, 1, 0};
+//         System.out.println(maximumConsecutiveOne(arr)); // Output: 3
+//     }
+// }
+
 
 // Intersection of two sorted arrays.
 
