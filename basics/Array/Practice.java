@@ -354,6 +354,41 @@
 //     }
 // }
 
+// Return maximum length of subarray with negative numbers whose sum = k 
+// import java.util.HashMap;
+
+// class Test {
+//     public static int longestSubArray(int[] arr,int k) {
+//       int sum = 0 ;
+//       int maxLen = -1;
+      
+//       HashMap<Integer,Integer> preSumMap = new HashMap<>();
+//       for(int i = 0 ;i<arr.length;i++){
+//         sum+=arr[i];
+
+//         if(sum ==k){
+//           maxLen = i + 1 ;
+//         }
+
+//         int rem = sum - k ;
+//         if(preSumMap.containsKey(sum)){
+//           int len = i-preSumMap.get(rem);
+//           maxLen = Math.max(maxLen, len);
+//         }
+
+//         if(!preSumMap.containsKey(sum)){
+//           preSumMap.put(sum, i);
+//         }
+//       }
+//       return maxLen;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {-1, 1, 1};
+//         int  k = 1;
+//         System.out.println(longestSubArray(arr,k)); 
+//     }
+// }
+
 // If sum of any two element is equal to target then return "YES"
 // import java.util.Arrays;
 // public class Practice1 {
