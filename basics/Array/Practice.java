@@ -371,7 +371,7 @@
 //         }
 
 //         int rem = sum - k ;
-//         if(preSumMap.containsKey(sum)){
+//         if(preSumMap.containsKey(rem)){
 //           int len = i-preSumMap.get(rem);
 //           maxLen = Math.max(maxLen, len);
 //         }
