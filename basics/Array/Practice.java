@@ -571,36 +571,46 @@
 // Rearrange the arrays by sign it unequal no of positive and negative elements 
 // import java.util.ArrayList;
 // import java.util.Arrays;
+
 // public class Practice1 {
 //     public static void main(String[] args) {
-//         int[] arr = {-1,2,3,4,-3,1};
-//         ArrayList <Integer> pos = new ArrayList<>();
-//         ArrayList <Integer> neg = new ArrayList<>();
+//         int[] arr = {-1, 2, 3, 4, -3, 1};
 
-//         for(int i = 0 ;i <arr.length;i++){
-//             if(arr[i]>0){
+//         ArrayList<Integer> pos = new ArrayList<>();
+//         ArrayList<Integer> neg = new ArrayList<>();
+
+//         // Separate positives and negatives
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] > 0) {
 //                 pos.add(arr[i]);
-//             }else{
+//             } else {
 //                 neg.add(arr[i]);
 //             }
 //         }
 
-//         int MIN = Math.min(pos.size(),neg.size());
-//         for(int j = 0 ;j<MIN;j++){
-//             arr[j*2]= pos.get(j);
-//             arr[(j*2)+1]= neg.get(j);
+//         int min = Math.min(pos.size(), neg.size());
+//         int idx = 0;
+
+//         // Alternate placement
+//         for (int i = 0; i < min; i++) {
+//             arr[idx++] = pos.get(i);
+//             arr[idx++] = neg.get(i);
 //         }
 
-//         for(int k = MIN;k<pos.size();k++){
-//             arr[k+MIN] = pos.get(k);
+//         // Remaining positives
+//         for (int i = min; i < pos.size(); i++) {
+//             arr[idx++] = pos.get(i);
 //         }
-//          for(int k = MIN;k<neg.size();k++){
-//             arr[k+MIN] = neg.get(k);
+
+//         // Remaining negatives
+//         for (int i = min; i < neg.size(); i++) {
+//             arr[idx++] = neg.get(i);
 //         }
 
 //         System.out.println(Arrays.toString(arr));
 //     }
 // }
+
 
 // When to buy stock and sell stock 
 // public class Practice1 {
@@ -636,6 +646,43 @@
 //         System.out.println(profit);
 //     }
 // }
+
+
+
+// optimal : when to buy and sell stock
+// public class Practice {
+
+//   public static int maxProfit(int[] arr) {
+//     int maximum = Integer.MIN_VALUE;
+//     int minPrice = Integer.MAX_VALUE;
+//     int minIndex = 0;
+//     int maxIndex = 0 ;
+//     for(int i=1;i<arr.length;i++){
+//       if(arr[i]<minPrice){
+//         minPrice = arr[i];
+//         minIndex = i;
+//       }else{
+//         if(arr[i]-minPrice > maximum){
+//           maximum = Math.max(maximum, arr[i]-minPrice);
+//           maxIndex = i;
+//         }else{
+//           maximum = Math.max(maximum, arr[i]-minPrice);
+//         }
+        
+//       }
+      
+//     }
+//     System.out.println("Buy on : "+minIndex+" and sell on : " + maxIndex);
+//     return maximum;
+//   }
+
+//   public static void main(String[] args) {
+//     int[] arr = {7,1,5,3,6,4};
+//     System.out.println(maxProfit(arr));;
+    
+//   }
+// }
+
 
 // concating two array. 
 
@@ -875,7 +922,7 @@
 // }
 // }
 
-// Q: Given an array containing some integer value . find the no of elements
+// Q: Given an array containing some integer value. find the no of elements
 // which contains even no of digits.
 
 // public class Practice{
@@ -943,6 +990,72 @@
 // return maxWealth;
 // }
 // }
+
+
+// Q : Return the length of longest consecutive array 
+// import java.util.*;
+
+// class Solution {
+//     public int longestConsecutive(int[] nums) {
+//         // Get the length of the array
+//         int n = nums.length;
+
+//         // If the array is empty, no sequence exists
+//         if (n == 0) return 0;
+
+//         // Variable to store the longest sequence length found
+//         int longest = 1; 
+
+//         // HashSet to store unique elements for O(1) lookup
+//         Set<Integer> st = new HashSet<>();
+
+//         // Add all elements to the set to remove duplicates
+//         for (int i = 0; i < n; i++) {
+//             st.add(nums[i]);
+//         }
+
+//         /* Loop through each element in the set to find 
+//            the starting point of consecutive sequences */
+//         for (int it : st) {
+//             // If there is no number before 'it', it’s the start of a sequence
+//             if (!st.contains(it - 1)) {
+//                 // Start the count for this sequence
+//                 int cnt = 1; 
+//                 // Store the current number
+//                 int x = it; 
+
+//                 // Keep checking for the next consecutive number
+//                 while (st.contains(x + 1)) {
+//                     // Move to the next number in sequence
+//                     x = x + 1; 
+//                     // Increment the length of current sequence
+//                     cnt = cnt + 1; 
+//                 }
+
+//                 // Update the longest sequence length if needed
+//                 longest = Math.max(longest, cnt);
+//             }
+//         }
+
+//         // Return the length of the longest sequence
+//         return longest;
+//     }
+
+//     public static void main(String[] args) {
+//         // Input array
+//         int[] a = {100, 4, 200, 1, 3, 2}; 
+
+//         // Create an instance of Solution class
+//         Solution solution = new Solution(); 
+        
+//         // Call the function to get the longest consecutive sequence length
+//         int ans = solution.longestConsecutive(a); 
+        
+//         // Print the result
+//         System.out.println("The longest consecutive sequence is " + ans); 
+//     }
+// }
+
 
 // Binary Search
 // public class Practice {
