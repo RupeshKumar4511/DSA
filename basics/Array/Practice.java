@@ -1056,6 +1056,51 @@
 //     }
 // }
 
+// Rotate an array to 90 degree
+// import java.util.Arrays;
+
+// public class Practice {
+
+//   public static void reverse(int[] arr){
+//     int start = 0;
+//     int end = arr.length-1;
+//     while(start<=end){
+//       int temp = arr[start];
+//       arr[start] = arr[end];
+//       arr[end] = temp;
+//       start++;
+//       end--;
+//     }
+//   }
+
+//   public static void rotateNinty(int[][]arr){
+//     for (int i = 0 ;i<arr.length;i++){
+//       for(int j = i ;j<arr[i].length;j++){
+//         int temp = arr[i][j];
+//         arr[i][j] = arr[j][i];
+//         arr[j][i] = temp;
+
+//       }
+//     }
+
+//     for(int i = 0;i<arr.length;i++){
+//       reverse(arr[i]);
+//     }
+
+//     System.out.println(Arrays.toString(arr[0]));
+//     System.out.println(Arrays.toString(arr[1]));
+//     System.out.println(Arrays.toString(arr[2]));
+   
+//   }
+
+//   public static void main(String[] args) {
+//     int[][] arr = {{1, 2, 3},{4, 5, 6},{7, 8, 9}};
+//     rotateNinty(arr);
+    
+    
+//   }
+// }
+
 
 // Binary Search
 // public class Practice {
