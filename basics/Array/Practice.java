@@ -1454,7 +1454,7 @@
 
 // }
 
-// This will not work for the rotated sorted array containing no duplicate
+// This will not work for the rotated sorted array containing duplicate
 // values.
 // public static int findPivot(int[] arr) {
 // int left = 0;
